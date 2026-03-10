@@ -528,6 +528,89 @@ export default function AshleyFlowMap() {
         </div>
       </div>
 
+      {/* ── Complexity Table ── */}
+      {(() => {
+        const rows = NODES
+          .filter(n => !EXCLUDED.has(n.id))
+          .map(n => {
+            const inE = EDGES.filter(e => e.to === n.id);
+            const outE = EDGES.filter(e => e.from === n.id);
+            const inVol = inE.reduce((a, e) => a + e.pct, 0);
+            const outVol = outE.reduce((a, e) => a + e.pct, 0);
+            return {
+              label: n.label,
+              sub: n.sub,
+              type: n.t,
+              inCount: inE.length,
+              outCount: outE.length,
+              totalConn: inE.length + outE.length,
+              inVol,
+              outVol,
+              totalVol: inVol + outVol,
+              bn: bottleneck[n.id],
+            };
+          })
+          .sort((a, b) => b.totalConn - a.totalConn || b.totalVol - a.totalVol);
+
+        const maxConn = rows[0]?.totalConn || 1;
+
+        return (
+          <div style={{ marginTop: 14, borderTop: "1px solid #cbd5e1", paddingTop: 12 }}>
+            <div style={{ color: "#1e293b", fontSize: 11, fontWeight: 700, letterSpacing: 1.5, marginBottom: 8, fontFamily: "'DM Mono',monospace" }}>
+              ROUTING COMPLEXITY RANKING
+            </div>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 10, fontFamily: "'DM Mono',monospace" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid #cbd5e1" }}>
+                    {["#", "WORK CENTER", "TYPE", "IN", "OUT", "TOTAL CONN", "IN VOL %", "OUT VOL %", "TOTAL VOL %", "COMPLEXITY"].map(h => (
+                      <th key={h} style={{ padding: "6px 8px", textAlign: "left", color: "#475569", fontWeight: 700, fontSize: 9, letterSpacing: 1, whiteSpace: "nowrap" }}>
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((r, i) => (
+                    <tr key={r.label} style={{ borderBottom: "1px solid #e2e8f0", background: i % 2 === 0 ? "#ffffff" : "#f8fafc" }}>
+                      <td style={{ padding: "5px 8px", color: "#64748b", fontWeight: 700 }}>{i + 1}</td>
+                      <td style={{ padding: "5px 8px", color: "#1e293b", fontWeight: 700 }}>
+                        {r.label}
+                        {r.sub && <span style={{ color: "#94a3b8", fontWeight: 400, marginLeft: 6, fontSize: 9 }}>{r.sub}</span>}
+                      </td>
+                      <td style={{ padding: "5px 8px" }}>
+                        <span style={{
+                          display: "inline-block", padding: "1px 6px", borderRadius: 3, fontSize: 8,
+                          background: FILL[r.type], border: `1px solid ${BORDER[r.type]}`, color: TCOLOR[r.type], fontWeight: 700
+                        }}>
+                          {r.type.toUpperCase()}
+                        </span>
+                      </td>
+                      <td style={{ padding: "5px 8px", color: "#334155" }}>{r.inCount}</td>
+                      <td style={{ padding: "5px 8px", color: "#334155" }}>{r.outCount}</td>
+                      <td style={{ padding: "5px 8px", color: "#1e293b", fontWeight: 700 }}>{r.totalConn}</td>
+                      <td style={{ padding: "5px 8px", color: "#334155" }}>{r.inVol}%</td>
+                      <td style={{ padding: "5px 8px", color: "#334155" }}>{r.outVol}%</td>
+                      <td style={{ padding: "5px 8px", color: "#1e293b", fontWeight: 700 }}>{r.totalVol}%</td>
+                      <td style={{ padding: "5px 8px", width: 120 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                          <div style={{ flex: 1, height: 8, background: "#e2e8f0", borderRadius: 4, overflow: "hidden" }}>
+                            <div style={{
+                              width: `${(r.totalConn / maxConn) * 100}%`, height: "100%", borderRadius: 4,
+                              background: bnColor(r.bn),
+                            }}/>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })()}
+
       {/* ── Footer note ── */}
       <div style={{ marginTop: 6, color: "#64748b", fontSize: 9, letterSpacing: 1, fontFamily: "'DM Mono',monospace" }}>
         NOTE: PERCENTAGES REPRESENT ROUTING SPLIT AT EACH WORK CENTER — NOT ABSOLUTE VOLUME.
