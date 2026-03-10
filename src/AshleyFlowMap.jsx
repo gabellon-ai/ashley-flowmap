@@ -173,7 +173,7 @@ export default function AshleyFlowMap() {
       <div style={{ marginBottom: 12, borderBottom: "1px solid #cbd5e1", paddingBottom: 10 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
           <span style={{ color: "#0284c7", fontSize: 11, letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
-            BLUESHIFT OPS
+            KINETIC VISION
           </span>
           <span style={{ color: "#94a3b8", fontSize: 11 }}>|</span>
           <span style={{ color: "#1e293b", fontSize: 15, fontWeight: 700, letterSpacing: 0.5 }}>
