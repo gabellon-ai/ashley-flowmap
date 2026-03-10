@@ -8,32 +8,32 @@ const f = v => +v.toFixed(1);
 // ─── Visual helpers ────────────────────────────────────────
 const strokeW = p => Math.max(1.5, (p / 100) * 14);
 const edgeColor = p =>
-  p >= 70 ? "#00e5ff" : p >= 40 ? "#38bdf8" : p >= 20 ? "#818cf8" : "#a78bfa";
+  p >= 70 ? "#0284c7" : p >= 40 ? "#2563eb" : p >= 20 ? "#6366f1" : "#8b5cf6";
 
 // ─── Node color palettes ───────────────────────────────────
 const FILL = {
-  input:   "#0f2744",
-  cutting: "#2e0a5c",
-  cell:    "#042f26",
-  plant3:  "#4a1800",
-  process: "#0a1f5c",
-  output:  "#073d18",
+  input:   "#dbeafe",
+  cutting: "#ede9fe",
+  cell:    "#d1fae5",
+  plant3:  "#ffedd5",
+  process: "#dbeafe",
+  output:  "#dcfce7",
 };
 const BORDER = {
-  input:   "#1e4a8a",
-  cutting: "#6d28d9",
-  cell:    "#065f46",
-  plant3:  "#c2410c",
-  process: "#1d4ed8",
-  output:  "#15803d",
+  input:   "#3b82f6",
+  cutting: "#8b5cf6",
+  cell:    "#10b981",
+  plant3:  "#f97316",
+  process: "#3b82f6",
+  output:  "#22c55e",
 };
 const TCOLOR = {
-  input:   "#93c5fd",
-  cutting: "#c4b5fd",
-  cell:    "#6ee7b7",
-  plant3:  "#fb923c",
-  process: "#93c5fd",
-  output:  "#86efac",
+  input:   "#1e3a5f",
+  cutting: "#3b0764",
+  cell:    "#064e3b",
+  plant3:  "#7c2d12",
+  process: "#1e3a5f",
+  output:  "#14532d",
 };
 
 // ─── Node definitions (cx, cy = center) ────────────────────
@@ -163,32 +163,32 @@ export default function AshleyFlowMap() {
 
   return (
     <div style={{
-      background: "#060a12",
+      background: "#f8fafc",
       minHeight: "100vh",
       padding: "16px 14px 14px",
       fontFamily: "'DM Mono', 'Courier New', monospace",
     }}>
 
       {/* ── Header ── */}
-      <div style={{ marginBottom: 12, borderBottom: "1px solid #1a2540", paddingBottom: 10 }}>
+      <div style={{ marginBottom: 12, borderBottom: "1px solid #cbd5e1", paddingBottom: 10 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-          <span style={{ color: "#00e5ff", fontSize: 11, letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
+          <span style={{ color: "#0284c7", fontSize: 11, letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
             BLUESHIFT OPS
           </span>
-          <span style={{ color: "#1e3a5f", fontSize: 11 }}>|</span>
-          <span style={{ color: "#e2e8f0", fontSize: 15, fontWeight: 700, letterSpacing: 0.5 }}>
+          <span style={{ color: "#94a3b8", fontSize: 11 }}>|</span>
+          <span style={{ color: "#1e293b", fontSize: 15, fontWeight: 700, letterSpacing: 0.5 }}>
             Ashley Furniture — Arcadia Production Flow Map
           </span>
         </div>
         <div style={{ display: "flex", gap: 20, marginTop: 6, alignItems: "center" }}>
-          <span style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>
+          <span style={{ color: "#64748b", fontSize: 10, letterSpacing: 1 }}>
             CONNECTOR WIDTH ∝ ROUTING VOLUME %
           </span>
-          <span style={{ color: "#1e3a5f", fontSize: 10 }}>·</span>
-          <span style={{ color: "#475569", fontSize: 10 }}>
+          <span style={{ color: "#94a3b8", fontSize: 10 }}>·</span>
+          <span style={{ color: "#64748b", fontSize: 10 }}>
             {totalEdges} ROUTING PATHS &nbsp;·&nbsp; AVG {avgPct}% &nbsp;·&nbsp; {highFlowEdges} HIGH-VOLUME FLOWS (&gt;50%)
           </span>
-          <span style={{ color: "#475569", fontSize: 10, marginLeft: "auto" }}>
+          <span style={{ color: "#64748b", fontSize: 10, marginLeft: "auto" }}>
             HOVER NODES OR EDGES FOR DETAIL
           </span>
         </div>
@@ -200,10 +200,10 @@ export default function AshleyFlowMap() {
           <defs>
             {/* Arrow markers */}
             <marker id="arr"  markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-              <polygon points="0 0, 7 3.5, 0 7" fill="#334155" />
+              <polygon points="0 0, 7 3.5, 0 7" fill="#94a3b8" />
             </marker>
             <marker id="arrH" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-              <polygon points="0 0, 7 3.5, 0 7" fill="#00e5ff" />
+              <polygon points="0 0, 7 3.5, 0 7" fill="#0284c7" />
             </marker>
 
             {/* Glow filter for highlighted elements */}
@@ -214,43 +214,43 @@ export default function AshleyFlowMap() {
 
             {/* Subtle scanline pattern */}
             <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
-              <rect width="1" height="1" fill="#ffffff" opacity="0.012"/>
+              <rect width="1" height="1" fill="#000000" opacity="0.01"/>
             </pattern>
           </defs>
 
           {/* Base background */}
-          <rect width={CW} height={CH} fill="#060a12"/>
+          <rect width={CW} height={CH} fill="#ffffff"/>
           <rect width={CW} height={CH} fill="url(#scanlines)"/>
 
           {/* Grid */}
           {[...Array(18)].map((_, i) => (
             <line key={"gx"+i} x1={(i+1)*70} y1={0} x2={(i+1)*70} y2={CH}
-              stroke="#0c1420" strokeWidth={1}/>
+              stroke="#e2e8f0" strokeWidth={1}/>
           ))}
           {[...Array(8)].map((_, i) => (
             <line key={"gy"+i} x1={0} y1={(i+1)*70} x2={CW} y2={(i+1)*70}
-              stroke="#0c1420" strokeWidth={1}/>
+              stroke="#e2e8f0" strokeWidth={1}/>
           ))}
 
           {/* Column zone hints */}
           <rect x={5} y={5} width={155} height={CH-10} rx={3}
-            fill="#0e1825" stroke="#111e30" strokeWidth={1}/>
+            fill="#eff6ff" stroke="#bfdbfe" strokeWidth={1}/>
           <rect x={168} y={5} width={120} height={CH-10} rx={3}
-            fill="#0e1825" stroke="#111e30" strokeWidth={1}/>
+            fill="#f5f3ff" stroke="#ddd6fe" strokeWidth={1}/>
           <rect x={916} y={5} width={350} height={CH-10} rx={3}
-            fill="#071a0e" stroke="#0a2414" strokeWidth={1}/>
+            fill="#f0fdf4" stroke="#bbf7d0" strokeWidth={1}/>
 
           {/* Column labels */}
           {[["INPUT", 78], ["CUTTING", 232], ["PROCESS", 560], ["FINISHING", 780], ["OUTPUT", 1010]].map(([lbl, x]) => (
             <text key={lbl} x={x} y={570} textAnchor="middle" fontSize={8}
-              fill="#1e3a5f" letterSpacing={2} fontFamily="'DM Mono',monospace">{lbl}</text>
+              fill="#64748b" letterSpacing={2} fontFamily="'DM Mono',monospace">{lbl}</text>
           ))}
 
           {/* ── Draw edges (below nodes) ── */}
           {paths.map((p, i) => {
             const op   = eOpacity(i);
             const hi   = hovE === i || (hov && isConn(hov, i));
-            const clr  = hi ? "#00e5ff" : edgeColor(p.pct);
+            const clr  = hi ? "#0284c7" : edgeColor(p.pct);
             const sW   = strokeW(p.pct);
             const showLbl = p.pct >= 35 || hi;
 
@@ -265,8 +265,8 @@ export default function AshleyFlowMap() {
 
                 {/* Glow layer for highlighted edges */}
                 {hi && (
-                  <path d={p.d} fill="none" stroke="#00e5ff"
-                    strokeWidth={sW + 4} opacity={0.2}
+                  <path d={p.d} fill="none" stroke="#0284c7"
+                    strokeWidth={sW + 4} opacity={0.15}
                     style={{ pointerEvents: "none" }}/>
                 )}
 
@@ -280,9 +280,9 @@ export default function AshleyFlowMap() {
                 {showLbl && (
                   <g style={{ pointerEvents: "none" }}>
                     <rect x={p.mx - 14} y={p.my - 9} width={28} height={14} rx={2}
-                      fill="#060a12" fillOpacity={0.92} stroke={hi ? "#00e5ff" : "#1e2d3d"} strokeWidth={0.5}/>
+                      fill="#ffffff" fillOpacity={0.95} stroke={hi ? "#0284c7" : "#cbd5e1"} strokeWidth={0.5}/>
                     <text x={p.mx} y={p.my + 4} textAnchor="middle" fontSize={9}
-                      fontWeight={700} fill={hi ? "#00e5ff" : "#64748b"}
+                      fontWeight={700} fill={hi ? "#0284c7" : "#334155"}
                       fontFamily="'DM Mono',monospace">
                       {p.pct}%
                     </text>
@@ -311,15 +311,15 @@ export default function AshleyFlowMap() {
                 {/* Glow backdrop when highlighted */}
                 {(isH || isC) && (
                   <rect width={nw} height={NH} rx={NR}
-                    fill={isH ? "#00e5ff" : BORDER[n.t]}
-                    opacity={0.15} filter="url(#glow)"/>
+                    fill={isH ? "#0284c7" : BORDER[n.t]}
+                    opacity={0.12} filter="url(#glow)"/>
                 )}
 
                 {/* Node body */}
                 <rect width={nw} height={NH} rx={NR}
                   fill={FILL[n.t]}
-                  stroke={isH ? "#00e5ff" : isC ? BORDER[n.t] : "#0f1e30"}
-                  strokeWidth={isH ? 1.5 : 1}
+                  stroke={isH ? "#0284c7" : isC ? BORDER[n.t] : "#cbd5e1"}
+                  strokeWidth={isH ? 2 : 1}
                   opacity={dim ? 0.15 : 1}
                   style={{ transition: "opacity 0.12s" }}/>
 
@@ -332,7 +332,7 @@ export default function AshleyFlowMap() {
                 {/* Label */}
                 <text x={nw / 2} y={n.sub ? 18 : NH / 2 + 5}
                   textAnchor="middle" fontSize={11} fontWeight={700}
-                  fill={dim ? "#1e3a5f" : TCOLOR[n.t]}
+                  fill={dim ? "#94a3b8" : TCOLOR[n.t]}
                   fontFamily="'DM Mono',monospace"
                   style={{ transition: "fill 0.12s" }}>
                   {n.label}
@@ -341,7 +341,7 @@ export default function AshleyFlowMap() {
                 {/* Sub-label */}
                 {n.sub && (
                   <text x={nw / 2} y={35} textAnchor="middle" fontSize={8.5}
-                    fill={dim ? "#0f1e30" : TCOLOR[n.t]} opacity={dim ? 1 : 0.6}
+                    fill={dim ? "#94a3b8" : TCOLOR[n.t]} opacity={dim ? 0.5 : 0.75}
                     fontFamily="'DM Mono',monospace">
                     {n.sub}
                   </text>
@@ -362,9 +362,9 @@ export default function AshleyFlowMap() {
             return (
               <g style={{ pointerEvents: "none" }}>
                 <rect x={tipX} y={tipY} width={tW} height={tH} rx={3}
-                  fill="#0d1929" stroke="#00e5ff" strokeWidth={1}/>
+                  fill="#ffffff" stroke="#0284c7" strokeWidth={1}/>
                 <text x={tipX + tW / 2} y={tipY + 17} textAnchor="middle"
-                  fontSize={10} fill="#e2e8f0" fontFamily="'DM Mono',monospace">
+                  fontSize={10} fill="#1e293b" fontFamily="'DM Mono',monospace">
                   {sN} → {tN}: {e.pct}%
                 </text>
               </g>
@@ -381,23 +381,23 @@ export default function AshleyFlowMap() {
             return (
               <g style={{ pointerEvents: "none" }}>
                 <rect x={panelX} y={panelY} width={panelW} height={panelH} rx={4}
-                  fill="#0d1929" stroke="#00e5ff" strokeWidth={1} opacity={0.97}/>
+                  fill="#ffffff" stroke="#0284c7" strokeWidth={1} opacity={0.97}/>
                 <text x={panelX + 10} y={panelY + 17} fontSize={10} fontWeight={700}
-                  fill="#00e5ff" fontFamily="'DM Mono',monospace">{n.label.toUpperCase()}</text>
+                  fill="#0284c7" fontFamily="'DM Mono',monospace">{n.label.toUpperCase()}</text>
                 {n.sub && <text x={panelX + 10} y={panelY + 30} fontSize={8.5}
                   fill="#64748b" fontFamily="'DM Mono',monospace">{n.sub}</text>}
                 <text x={panelX + 10} y={panelY + 46} fontSize={9}
-                  fill="#94a3b8" fontFamily="'DM Mono',monospace">
+                  fill="#334155" fontFamily="'DM Mono',monospace">
                   ↑ {inE.length} incoming route{inE.length !== 1 ? "s" : ""}
                 </text>
                 <text x={panelX + 10} y={panelY + 60} fontSize={9}
-                  fill="#94a3b8" fontFamily="'DM Mono',monospace">
+                  fill="#334155" fontFamily="'DM Mono',monospace">
                   ↓ {out.length} outgoing route{out.length !== 1 ? "s" : ""}
                   {out.length > 0 ? `  (${outTotal}% total distributed)` : ""}
                 </text>
                 {inE.slice(0, 2).map((e, i) => (
                   <text key={i} x={panelX + 145 + i * 65} y={panelY + 17}
-                    fontSize={9} fill="#38bdf8" textAnchor="middle" fontFamily="'DM Mono',monospace">
+                    fontSize={9} fill="#2563eb" textAnchor="middle" fontFamily="'DM Mono',monospace">
                     ← {nm[e.from].label.split(" ")[0]} {e.pct}%
                   </text>
                 ))}
@@ -409,7 +409,7 @@ export default function AshleyFlowMap() {
 
       {/* ── Legend ── */}
       <div style={{ display: "flex", gap: 16, marginTop: 10, flexWrap: "wrap", alignItems: "center",
-        borderTop: "1px solid #0f1e30", paddingTop: 10 }}>
+        borderTop: "1px solid #cbd5e1", paddingTop: 10 }}>
 
         {/* Node type legend */}
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -435,7 +435,7 @@ export default function AshleyFlowMap() {
 
         {/* Volume scale */}
         <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ color: "#334155", fontSize: 9, letterSpacing: 1.5, fontFamily: "'DM Mono',monospace" }}>
+          <span style={{ color: "#475569", fontSize: 9, letterSpacing: 1.5, fontFamily: "'DM Mono',monospace" }}>
             VOLUME SCALE:
           </span>
           {[[6, "6%"], [30, "30%"], [70, "70%"], [100, "100%"]].map(([pct, lbl]) => (
@@ -448,14 +448,14 @@ export default function AshleyFlowMap() {
             </div>
           ))}
           <div style={{ display: "flex", alignItems: "center", gap: 5, marginLeft: 6 }}>
-            <div style={{ width: 28, height: 2, background: "linear-gradient(to right, #a78bfa, #38bdf8, #00e5ff)" }}/>
-            <span style={{ color: "#334155", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>LOW → HIGH</span>
+            <div style={{ width: 28, height: 2, background: "linear-gradient(to right, #8b5cf6, #2563eb, #0284c7)" }}/>
+            <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>LOW → HIGH</span>
           </div>
         </div>
       </div>
 
       {/* ── Footer note ── */}
-      <div style={{ marginTop: 6, color: "#1e3a5f", fontSize: 9, letterSpacing: 1, fontFamily: "'DM Mono',monospace" }}>
+      <div style={{ marginTop: 6, color: "#64748b", fontSize: 9, letterSpacing: 1, fontFamily: "'DM Mono',monospace" }}>
         NOTE: PERCENTAGES REPRESENT ROUTING SPLIT AT EACH WORK CENTER — NOT ABSOLUTE VOLUME.
         VALUES RECONSTRUCTED FROM SITE VISIT FLOW MAP. VERIFY WITH JONES / AS-400 DATA FOR EXACT FIGURES.
       </div>
