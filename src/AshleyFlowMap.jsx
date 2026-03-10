@@ -149,6 +149,46 @@ export default function AshleyFlowMap() {
   const nm    = useMemo(() => { const m = {}; NODES.forEach(n => m[n.id] = n); return m; }, []);
   const paths = useMemo(() => buildPaths(NODES, EDGES), []);
 
+  // ── Bottleneck scoring ──
+  // Score = incoming edge count * total incoming volume — higher = more convergence pressure
+  const bottleneck = useMemo(() => {
+    const scores = {};
+    NODES.forEach(n => {
+      const inEdges = EDGES.filter(e => e.to === n.id);
+      const outEdges = EDGES.filter(e => e.from === n.id);
+      const inVol = inEdges.reduce((a, e) => a + e.pct, 0);
+      // Convergence score: many high-volume inputs with fewer outputs = bottleneck
+      scores[n.id] = inEdges.length * inVol;
+    });
+    const vals = Object.values(scores);
+    const min = Math.min(...vals), max = Math.max(...vals);
+    const range = max - min || 1;
+    // Normalize to 0–1
+    const norm = {};
+    NODES.forEach(n => { norm[n.id] = (scores[n.id] - min) / range; });
+    return norm;
+  }, []);
+
+  // Map 0–1 score to green→yellow→red
+  const bnColor = (score) => {
+    if (score <= 0.5) {
+      // green to yellow
+      const t = score / 0.5;
+      const r = Math.round(34 + t * (202 - 34));
+      const g = Math.round(197 + t * (138 - 197));
+      const b = Math.round(94 + t * (4 - 94));
+      return `rgb(${r},${g},${b})`;
+    } else {
+      // yellow to red
+      const t = (score - 0.5) / 0.5;
+      const r = Math.round(202 + t * (220 - 202));
+      const g = Math.round(138 - t * 138);
+      const b = Math.round(4);
+      return `rgb(${r},${g},${b})`;
+    }
+  };
+  const bnWidth = (score) => 1.5 + score * 2.5; // 1.5px to 4px
+
   const isConn = (nid, ei) => EDGES[ei].from === nid || EDGES[ei].to === nid;
   const eOpacity = ei => {
     if (!hov && hovE == null) return 1;
@@ -315,11 +355,20 @@ export default function AshleyFlowMap() {
                     opacity={0.12} filter="url(#glow)"/>
                 )}
 
+                {/* Bottleneck indicator ring */}
+                {!isH && !isC && !dim && (
+                  <rect width={nw} height={NH} rx={NR}
+                    fill="none"
+                    stroke={bnColor(bottleneck[n.id])}
+                    strokeWidth={bnWidth(bottleneck[n.id])}
+                    opacity={0.8}/>
+                )}
+
                 {/* Node body */}
                 <rect width={nw} height={NH} rx={NR}
                   fill={FILL[n.t]}
-                  stroke={isH ? "#0284c7" : isC ? BORDER[n.t] : "#cbd5e1"}
-                  strokeWidth={isH ? 2 : 1}
+                  stroke={isH ? "#0284c7" : isC ? BORDER[n.t] : bnColor(bottleneck[n.id])}
+                  strokeWidth={isH ? 2 : bnWidth(bottleneck[n.id])}
                   opacity={dim ? 0.15 : 1}
                   style={{ transition: "opacity 0.12s" }}/>
 
@@ -451,6 +500,29 @@ export default function AshleyFlowMap() {
             <div style={{ width: 28, height: 2, background: "linear-gradient(to right, #8b5cf6, #2563eb, #0284c7)" }}/>
             <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>LOW → HIGH</span>
           </div>
+        </div>
+      </div>
+
+      {/* ── Bottleneck legend ── */}
+      <div style={{ display: "flex", gap: 14, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
+        <span style={{ color: "#475569", fontSize: 9, letterSpacing: 1.5, fontFamily: "'DM Mono',monospace" }}>
+          BOTTLENECK RISK:
+        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "2px solid #22c55e" }}/>
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>LOW</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "2.5px solid #ca8a04" }}/>
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>MED</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "3.5px solid #dc0004" }}/>
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>HIGH</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 5, marginLeft: 4 }}>
+          <div style={{ width: 40, height: 4, borderRadius: 2, background: "linear-gradient(to right, #22c55e, #ca8a04, #dc0004)" }}/>
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: "'DM Mono',monospace" }}>BORDER = CONVERGENCE PRESSURE</span>
         </div>
       </div>
 
