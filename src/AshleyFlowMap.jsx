@@ -196,7 +196,7 @@ export default function AshleyFlowMap() {
 
       {/* ── SVG Canvas ── */}
       <div style={{ overflowX: "auto" }}>
-        <svg width={CW} height={CH} style={{ display: "block" }}>
+        <svg viewBox={`0 0 ${CW} ${CH}`} style={{ display: "block", width: "100%", height: "auto" }}>
           <defs>
             {/* Arrow markers */}
             <marker id="arr"  markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
