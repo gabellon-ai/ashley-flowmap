@@ -151,21 +151,23 @@ export default function AshleyFlowMap() {
 
   // ── Bottleneck scoring ──
   // Score = incoming edge count * total incoming volume — higher = more convergence pressure
+  // Exclude aggregate endpoints (assembly, finishedgoods) — they converge by design
+  const EXCLUDED = new Set(["assembly", "finishedgoods"]);
   const bottleneck = useMemo(() => {
     const scores = {};
     NODES.forEach(n => {
+      if (EXCLUDED.has(n.id)) { scores[n.id] = null; return; }
       const inEdges = EDGES.filter(e => e.to === n.id);
-      const outEdges = EDGES.filter(e => e.from === n.id);
       const inVol = inEdges.reduce((a, e) => a + e.pct, 0);
-      // Convergence score: many high-volume inputs with fewer outputs = bottleneck
       scores[n.id] = inEdges.length * inVol;
     });
-    const vals = Object.values(scores);
-    const min = Math.min(...vals), max = Math.max(...vals);
+    const scoredVals = Object.values(scores).filter(v => v !== null);
+    const min = Math.min(...scoredVals), max = Math.max(...scoredVals);
     const range = max - min || 1;
-    // Normalize to 0–1
     const norm = {};
-    NODES.forEach(n => { norm[n.id] = (scores[n.id] - min) / range; });
+    NODES.forEach(n => {
+      norm[n.id] = scores[n.id] === null ? null : (scores[n.id] - min) / range;
+    });
     return norm;
   }, []);
 
@@ -356,7 +358,7 @@ export default function AshleyFlowMap() {
                 )}
 
                 {/* Bottleneck indicator ring */}
-                {!isH && !isC && !dim && (
+                {!isH && !isC && !dim && bottleneck[n.id] !== null && (
                   <rect width={nw} height={NH} rx={NR}
                     fill="none"
                     stroke={bnColor(bottleneck[n.id])}
@@ -367,8 +369,8 @@ export default function AshleyFlowMap() {
                 {/* Node body */}
                 <rect width={nw} height={NH} rx={NR}
                   fill={FILL[n.t]}
-                  stroke={isH ? "#0284c7" : isC ? BORDER[n.t] : bnColor(bottleneck[n.id])}
-                  strokeWidth={isH ? 2 : bnWidth(bottleneck[n.id])}
+                  stroke={isH ? "#0284c7" : isC ? BORDER[n.t] : bottleneck[n.id] !== null ? bnColor(bottleneck[n.id]) : "#cbd5e1"}
+                  strokeWidth={isH ? 2 : bottleneck[n.id] !== null ? bnWidth(bottleneck[n.id]) : 1}
                   opacity={dim ? 0.15 : 1}
                   style={{ transition: "opacity 0.12s" }}/>
 
