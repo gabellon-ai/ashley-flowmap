@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { FLOW_DATA, STATIONS, MACHINE_GROUPS, DEPARTMENTS } from "./flowData";
+import { FLOW_DATA, STATIONS, MACHINE_GROUPS, DEPARTMENTS, OPERATIONS, PARTS_BY_CLASS, PART_ROUTES } from "./flowData";
 
 // ─── Layout constants ────────────────────────────────────────
 const NODE_H = 44;
@@ -9,6 +9,8 @@ const PAD_Y = 40;
 const COL_GAP = 40;
 const ROW_GAP = 14;
 const NUM_COLS = 6;
+const OP_NUM_COLS = 8;
+const OP_MAX_NODES = 60;
 const f = v => +v.toFixed(1);
 
 // ─── Color palettes ──────────────────────────────────────────
@@ -37,6 +39,15 @@ function getNodeColor(id, level) {
     if (mg) return DEPT_COLORS[mg.department] || DEFAULT_COLOR;
     return DEFAULT_COLOR;
   }
+  if (level === "operation") {
+    // Parse "STATION::OPDSC" → color by station's department
+    const station = id.split("::")[0];
+    const st = STATIONS[station];
+    if (st) return DEPT_COLORS[st.department] || DEFAULT_COLOR;
+    const prefix = station.substring(0, 2).toUpperCase();
+    const prefixToDept = { CS: "SAW", CE: "EDGE / FOIL", CB: "DRILL", CR: "ROUTER", CD: "DOVETAIL", CF: "FINISH", CA: "ASSEMBLY", CP: "PRESS / MISC", CT: "CUT / PROFILE", CV: "HARDWARE" };
+    return DEPT_COLORS[prefixToDept[prefix]] || DEFAULT_COLOR;
+  }
   // Station level — color by department
   const st = STATIONS[id];
   if (st) return DEPT_COLORS[st.department] || DEFAULT_COLOR;
@@ -48,6 +59,11 @@ function getNodeColor(id, level) {
 function getNodeLabel(id, level) {
   if (level === "department") return id;
   if (level === "group") return id;
+  if (level === "operation") {
+    // Strip "STATION::" prefix, show just OPDSC
+    const parts = id.split("::");
+    return parts.length > 1 ? parts[1] : id;
+  }
   const st = STATIONS[id];
   return st ? st.description : id;
 }
@@ -58,6 +74,12 @@ function getNodeSublabel(id, level) {
     const mg = MACHINE_GROUPS[id];
     if (mg) return mg.department + " — " + mg.stations.length + " station" + (mg.stations.length !== 1 ? "s" : "");
     return "";
+  }
+  if (level === "operation") {
+    const op = OPERATIONS[id];
+    if (op) return op.station + " — " + op.avgRunLabor.toFixed(2) + "h";
+    const station = id.split("::")[0];
+    return station;
   }
   const st = STATIONS[id];
   return st ? st.id + " — " + st.group : "";
@@ -73,10 +95,24 @@ function edgeColor(ratio) {
 
 // ─── Layout computation ─────────────────────────────────────
 function computeLayout(flowLevel, level) {
-  const { nodes, edges } = flowLevel;
-  if (!nodes || nodes.length === 0) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300 };
+  let { nodes, edges } = flowLevel;
+  if (!nodes || nodes.length === 0) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300, totalNodes: 0, shownNodes: 0 };
 
-  const nodeW = level === "department" ? 130 : level === "group" ? 120 : 110;
+  const isOp = level === "operation";
+  const numCols = isOp ? OP_NUM_COLS : NUM_COLS;
+  const nodeW = level === "department" ? 130 : level === "group" ? 120 : isOp ? 100 : 110;
+
+  // Cap nodes at operation level
+  let totalNodes = nodes.length;
+  let shownNodes = totalNodes;
+  if (isOp && nodes.length > OP_MAX_NODES) {
+    const sorted = [...nodes].sort((a, b) => b.count - a.count);
+    nodes = sorted.slice(0, OP_MAX_NODES);
+    shownNodes = OP_MAX_NODES;
+    // Filter edges to only include visible nodes
+    const visibleIds = new Set(nodes.map(n => n.id));
+    edges = edges.filter(e => visibleIds.has(e.from) && visibleIds.has(e.to));
+  }
 
   // Source/target scoring
   const fromCount = {};
@@ -94,10 +130,10 @@ function computeLayout(flowLevel, level) {
   scored.sort((a, b) => b.score - a.score);
 
   // Assign to columns
-  const cols = Array.from({ length: NUM_COLS }, () => []);
-  const perCol = Math.max(1, Math.ceil(scored.length / NUM_COLS));
+  const cols = Array.from({ length: numCols }, () => []);
+  const perCol = Math.max(1, Math.ceil(scored.length / numCols));
   scored.forEach((n, i) => {
-    const ci = Math.min(Math.floor(i / perCol), NUM_COLS - 1);
+    const ci = Math.min(Math.floor(i / perCol), numCols - 1);
     cols[ci].push(n);
   });
   cols.forEach(col => col.sort((a, b) => b.count - a.count));
@@ -106,7 +142,7 @@ function computeLayout(flowLevel, level) {
   const colWidth = nodeW + COL_GAP;
   const maxColLen = Math.max(...cols.map(c => c.length), 1);
   const vbH = Math.max(300, PAD_Y * 2 + maxColLen * (NODE_H + ROW_GAP));
-  const vbW = PAD_X * 2 + NUM_COLS * colWidth;
+  const vbW = PAD_X * 2 + numCols * colWidth;
 
   const nodeMap = {};
   const laidOutNodes = [];
@@ -153,17 +189,19 @@ function computeLayout(flowLevel, level) {
       return { ...e, d, mx, my, ratio, strokeW };
     });
 
-  return { laidOutNodes, laidOutEdges, vbW, vbH, nodeW, maxEdge: maxE };
+  return { laidOutNodes, laidOutEdges, vbW, vbH, nodeW, maxEdge: maxE, totalNodes, shownNodes };
 }
 
 // ─── Main component ────────────────────────────────────────
 export default function DataFlowMap() {
   const [selectedClass, setSelectedClass] = useState("ALL PRODUCTS");
-  const [level, setLevel] = useState("department"); // "department" | "group" | "station"
+  const [level, setLevel] = useState("department"); // "department" | "group" | "station" | "operation"
   const [hovNode, setHovNode] = useState(null);
   const [hovEdge, setHovEdge] = useState(null);
-  const [deptFilter, setDeptFilter] = useState(null); // filter by dept
-  const [groupFilter, setGroupFilter] = useState(null); // filter by machine group
+  const [deptFilter, setDeptFilter] = useState(null);
+  const [groupFilter, setGroupFilter] = useState(null);
+  const [stationFilter, setStationFilter] = useState(null);
+  const [partFilter, setPartFilter] = useState(null);
 
   const classNames = useMemo(() =>
     Object.keys(FLOW_DATA).sort((a, b) => {
@@ -173,9 +211,83 @@ export default function DataFlowMap() {
     }), []);
 
   const classData = FLOW_DATA[selectedClass];
-  const flowLevel = classData ? classData[level] : null;
 
-  // Filter data based on dept/group filters
+  // Parts available for current class
+  const availableParts = useMemo(() => {
+    if (selectedClass === "ALL PRODUCTS") {
+      // Combine all parts across all classes
+      const all = [];
+      for (const parts of Object.values(PARTS_BY_CLASS)) {
+        all.push(...parts);
+      }
+      all.sort((a, b) => a.id.localeCompare(b.id));
+      return all;
+    }
+    return PARTS_BY_CLASS[selectedClass] || [];
+  }, [selectedClass]);
+
+  // Derive flow data from a single part's routing sequence
+  const partFlowLevel = useMemo(() => {
+    if (!partFilter || !PART_ROUTES[partFilter]) return null;
+    const route = PART_ROUTES[partFilter]; // [[wkctr, opdsc], ...]
+
+    // Build sequence with dept/group info
+    const sequence = route.map(([wkctr, opdsc]) => {
+      const meta = STATIONS[wkctr] || {};
+      const dept = meta.department || ((() => {
+        const upper = wkctr.toUpperCase();
+        if (upper.endsWith("RIS")) return "STAGING";
+        const pfx = upper.substring(0, 2);
+        const map = { CS: "SAW", CE: "EDGE / FOIL", CB: "DRILL", CR: "ROUTER", CD: "DOVETAIL", CF: "FINISH", CA: "ASSEMBLY", CP: "PRESS / MISC", CT: "CUT / PROFILE", CV: "HARDWARE" };
+        return map[pfx] || "OTHER";
+      })());
+      const group = meta.group || dept;
+      return { wkctr, opdsc, dept, group };
+    });
+
+    function buildLevel(keyFn) {
+      const nodeSet = new Set();
+      const nodeMap = {};
+      const edgeMap = {};
+      sequence.forEach(s => {
+        const k = keyFn(s);
+        if (!nodeSet.has(k)) { nodeMap[k] = 1; nodeSet.add(k); }
+      });
+      for (let i = 0; i < sequence.length - 1; i++) {
+        const ak = keyFn(sequence[i]), bk = keyFn(sequence[i + 1]);
+        if (ak !== bk) {
+          const ek = `${ak}|||${bk}`;
+          edgeMap[ek] = (edgeMap[ek] || 0) + 1;
+        }
+      }
+      return {
+        nodes: Object.entries(nodeMap).map(([id, count]) => ({ id, count })).sort((a, b) => b.count - a.count),
+        edges: Object.entries(edgeMap).map(([k, count]) => { const [from, to] = k.split("|||"); return { from, to, count }; }).sort((a, b) => b.count - a.count),
+      };
+    }
+
+    return {
+      department: buildLevel(s => s.dept),
+      group: buildLevel(s => s.group),
+      station: buildLevel(s => s.wkctr),
+      operation: buildLevel(s => `${s.wkctr}::${s.opdsc}`),
+    };
+  }, [partFilter]);
+
+  const flowLevel = partFlowLevel ? partFlowLevel[level] : (classData ? classData[level] : null);
+
+  // Available stations for the station filter dropdown at operation level
+  const availableStations = useMemo(() => {
+    if (level !== "operation" || !classData || !classData.operation) return [];
+    const stSet = new Set();
+    classData.operation.nodes.forEach(n => {
+      const station = n.id.split("::")[0];
+      stSet.add(station);
+    });
+    return [...stSet].sort();
+  }, [level, classData]);
+
+  // Filter data based on dept/group/station filters
   const filteredFlow = useMemo(() => {
     if (!flowLevel) return null;
 
@@ -209,21 +321,28 @@ export default function DataFlowMap() {
       }
     }
 
+    if (level === "operation" && stationFilter) {
+      const prefix = stationFilter + "::";
+      return {
+        nodes: flowLevel.nodes.filter(n => n.id.startsWith(prefix)),
+        edges: flowLevel.edges.filter(e => e.from.startsWith(prefix) || e.to.startsWith(prefix)),
+      };
+    }
+
     return flowLevel;
-  }, [flowLevel, level, deptFilter, groupFilter]);
+  }, [flowLevel, level, deptFilter, groupFilter, stationFilter]);
 
   const layout = useMemo(() => {
-    if (!filteredFlow) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300, nodeW: 110, maxEdge: 1 };
+    if (!filteredFlow) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300, nodeW: 110, maxEdge: 1, totalNodes: 0, shownNodes: 0 };
     return computeLayout(filteredFlow, level);
   }, [filteredFlow, level]);
 
-  const { laidOutNodes, laidOutEdges, vbW, vbH, nodeW = 110, maxEdge } = layout;
+  const { laidOutNodes, laidOutEdges, vbW, vbH, nodeW = 110, maxEdge, totalNodes = 0, shownNodes = 0 } = layout;
 
   // ── Bottleneck scoring ──
   const bottleneck = useMemo(() => {
     if (!filteredFlow || !filteredFlow.edges.length) return {};
     const scores = {};
-    const nodeSet = new Set(filteredFlow.nodes.map(n => n.id));
     filteredFlow.nodes.forEach(n => {
       const inEdges = filteredFlow.edges.filter(e => e.to === n.id);
       const inVol = inEdges.reduce((a, e) => a + e.count, 0);
@@ -239,7 +358,6 @@ export default function DataFlowMap() {
 
   const bnColor = (score) => {
     if (score == null) return "#cbd5e1";
-    // Vivid green → yellow → red
     if (score <= 0.5) {
       const t = score / 0.5;
       const r = Math.round(22 + t * (234 - 22));
@@ -253,7 +371,7 @@ export default function DataFlowMap() {
     const b = Math.round(8);
     return `rgb(${r},${g},${b})`;
   };
-  const bnWidth = (score) => score == null ? 1 : 3 + score * 4; // 3px min → 7px max
+  const bnWidth = (score) => score == null ? 1 : 3 + score * 4;
 
   const isConn = (nid, e) => e.from === nid || e.to === nid;
   const eOpacity = (e, i) => {
@@ -267,11 +385,16 @@ export default function DataFlowMap() {
       setLevel("group");
       setDeptFilter(nodeId);
       setGroupFilter(null);
+      setStationFilter(null);
       setHovNode(null); setHovEdge(null);
     } else if (level === "group") {
       setLevel("station");
       setGroupFilter(nodeId);
-      // Keep deptFilter if set
+      setStationFilter(null);
+      setHovNode(null); setHovEdge(null);
+    } else if (level === "station") {
+      setLevel("operation");
+      setStationFilter(nodeId);
       setHovNode(null); setHovEdge(null);
     }
   };
@@ -281,16 +404,30 @@ export default function DataFlowMap() {
       setLevel("department");
       setDeptFilter(null);
       setGroupFilter(null);
+      setStationFilter(null);
     } else if (target === "group") {
       setLevel("group");
       setGroupFilter(null);
+      setStationFilter(null);
     } else if (target === "station") {
-      setGroupFilter(null);
+      setLevel("station");
+      setStationFilter(null);
     }
     setHovNode(null); setHovEdge(null);
   };
 
+  const canDrill = level !== "operation";
+
+  const stationLabel = stationFilter
+    ? (STATIONS[stationFilter] ? STATIONS[stationFilter].description : stationFilter)
+    : null;
+
   const font = "'DM Mono', 'Courier New', monospace";
+
+  // Label truncation length
+  const maxLabelLen = level === "operation" ? 14 : 16;
+  // Font size for labels
+  const labelFontSize = level === "department" ? 11 : level === "operation" ? 8 : 9.5;
 
   return (
     <div style={{
@@ -311,7 +448,8 @@ export default function DataFlowMap() {
           <span style={{ color: "#64748b", fontSize: 10, textTransform: "uppercase", letterSpacing: 1 }}>
             {level === "department" ? "Department View"
               : level === "group" ? (deptFilter ? `Machine Groups — ${deptFilter}` : "All Machine Groups")
-              : groupFilter ? `Stations — ${groupFilter}` : deptFilter ? `Stations — ${deptFilter}` : "All Stations"}
+              : level === "station" ? (groupFilter ? `Stations — ${groupFilter}` : deptFilter ? `Stations — ${deptFilter}` : "All Stations")
+              : `Operations — ${stationLabel || "All"}`}
           </span>
         </div>
 
@@ -322,7 +460,7 @@ export default function DataFlowMap() {
             <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>PRODUCT CLASS:</label>
             <select
               value={selectedClass}
-              onChange={e => { setSelectedClass(e.target.value); setHovNode(null); setHovEdge(null); }}
+              onChange={e => { setSelectedClass(e.target.value); setPartFilter(null); setHovNode(null); setHovEdge(null); }}
               style={{
                 background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
                 padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
@@ -337,14 +475,36 @@ export default function DataFlowMap() {
             </select>
           </div>
 
+          {/* Parts (RTID) filter dropdown */}
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>PART:</label>
+            <select
+              value={partFilter || ""}
+              onChange={e => { setPartFilter(e.target.value || null); setHovNode(null); setHovEdge(null); }}
+              style={{
+                background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
+                padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
+                cursor: "pointer", maxWidth: 260,
+              }}
+            >
+              <option value="">All Parts ({availableParts.length})</option>
+              {availableParts.map(p => (
+                <option key={p.id} value={p.id}>
+                  {p.id}{p.desc ? ` — ${p.desc}` : ""}
+                </option>
+              ))}
+            </select>
+          </div>
+
           {/* Level toggle */}
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1, marginRight: 4 }}>VIEW:</label>
-            {[["department", "DEPARTMENT"], ["group", "MACHINE GROUP"], ["station", "STATION"]].map(([l, lbl]) => (
+            {[["department", "DEPARTMENT"], ["group", "MACHINE GROUP"], ["station", "STATION"], ["operation", "OPERATION"]].map(([l, lbl]) => (
               <button key={l} onClick={() => {
                 setLevel(l);
-                if (l === "department") { setDeptFilter(null); setGroupFilter(null); }
-                if (l === "group") { setGroupFilter(null); }
+                if (l === "department") { setDeptFilter(null); setGroupFilter(null); setStationFilter(null); }
+                if (l === "group") { setGroupFilter(null); setStationFilter(null); }
+                if (l === "station") { setStationFilter(null); }
                 setHovNode(null); setHovEdge(null);
               }}
                 style={{
@@ -359,13 +519,13 @@ export default function DataFlowMap() {
             ))}
           </div>
 
-          {/* Department filter (group & station views) */}
+          {/* Department filter (group, station & operation views) */}
           {(level === "group" || level === "station") && (
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>DEPT:</label>
               <select
                 value={deptFilter || ""}
-                onChange={e => { setDeptFilter(e.target.value || null); setGroupFilter(null); setHovNode(null); setHovEdge(null); }}
+                onChange={e => { setDeptFilter(e.target.value || null); setGroupFilter(null); setStationFilter(null); setHovNode(null); setHovEdge(null); }}
                 style={{
                   background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
                   padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
@@ -386,7 +546,7 @@ export default function DataFlowMap() {
               <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>GROUP:</label>
               <select
                 value={groupFilter || ""}
-                onChange={e => { setGroupFilter(e.target.value || null); setHovNode(null); setHovEdge(null); }}
+                onChange={e => { setGroupFilter(e.target.value || null); setStationFilter(null); setHovNode(null); setHovEdge(null); }}
                 style={{
                   background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
                   padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
@@ -400,6 +560,29 @@ export default function DataFlowMap() {
               </select>
             </div>
           )}
+
+          {/* Station filter (operation view) */}
+          {level === "operation" && (
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>STATION:</label>
+              <select
+                value={stationFilter || ""}
+                onChange={e => { setStationFilter(e.target.value || null); setHovNode(null); setHovEdge(null); }}
+                style={{
+                  background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
+                  padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
+                  cursor: "pointer",
+                }}
+              >
+                <option value="">All Stations</option>
+                {availableStations.map(s => {
+                  const st = STATIONS[s];
+                  const label = st ? `${s} — ${st.description}` : s;
+                  return <option key={s} value={s}>{label}</option>;
+                })}
+              </select>
+            </div>
+          )}
         </div>
 
         {/* Breadcrumb */}
@@ -409,7 +592,7 @@ export default function DataFlowMap() {
               textDecoration: level === "department" ? "none" : "underline", fontWeight: level === "department" ? 700 : 400 }}>
             Departments
           </span>
-          {(level === "group" || level === "station") && (
+          {(level === "group" || level === "station" || level === "operation") && (
             <>
               <span style={{ color: "#94a3b8" }}>&gt;</span>
               <span onClick={() => handleBreadcrumb("group")}
@@ -425,16 +608,33 @@ export default function DataFlowMap() {
               )}
             </>
           )}
-          {level === "station" && (
+          {(level === "station" || level === "operation") && (
+            <>
+              <span style={{ color: "#94a3b8" }}>&gt;</span>
+              <span onClick={() => handleBreadcrumb("station")}
+                style={{ color: level === "station" ? "#1e293b" : "#0284c7", cursor: level === "station" ? "default" : "pointer",
+                  textDecoration: level === "station" ? "none" : "underline", fontWeight: level === "station" ? 700 : 400 }}>
+                Stations{groupFilter ? ` — ${groupFilter}` : deptFilter ? ` — ${deptFilter}` : ""}
+              </span>
+            </>
+          )}
+          {level === "operation" && (
             <>
               <span style={{ color: "#94a3b8" }}>&gt;</span>
               <span style={{ color: "#1e293b", fontWeight: 700 }}>
-                Stations{groupFilter ? ` — ${groupFilter}` : deptFilter ? ` — ${deptFilter}` : ""}
+                Operations{stationLabel ? ` — ${stationLabel}` : ""}
               </span>
             </>
           )}
         </div>
       </div>
+
+      {/* ── Node cap indicator ── */}
+      {level === "operation" && totalNodes > shownNodes && (
+        <div style={{ marginBottom: 6, padding: "4px 10px", background: "#fef3c7", border: "1px solid #f59e0b", borderRadius: 4, fontSize: 10, color: "#78350f", fontFamily: font }}>
+          Showing top {shownNodes} of {totalNodes} operations (sorted by routing count)
+        </div>
+      )}
 
       {/* ── SVG Canvas ── */}
       <div style={{ overflowX: "auto" }}>
@@ -500,7 +700,6 @@ export default function DataFlowMap() {
             const clr = getNodeColor(n.id, level);
             const label = getNodeLabel(n.id, level);
             const sublabel = getNodeSublabel(n.id, level);
-            const canDrill = level === "department" || level === "group";
 
             return (
               <g key={n.id} transform={`translate(${n.x},${n.y})`}
@@ -526,14 +725,14 @@ export default function DataFlowMap() {
                 )}
 
                 <text x={n.w / 2} y={sublabel ? 16 : NODE_H / 2 + 4}
-                  textAnchor="middle" fontSize={level === "department" ? 11 : 9.5} fontWeight={700}
+                  textAnchor="middle" fontSize={labelFontSize} fontWeight={700}
                   fill={dim ? "#94a3b8" : clr.text} fontFamily={font}
                   style={{ transition: "fill 0.12s" }}>
-                  {label.length > 16 ? label.slice(0, 15) + "…" : label}
+                  {label.length > maxLabelLen ? label.slice(0, maxLabelLen - 1) + "…" : label}
                 </text>
 
                 {sublabel && (
-                  <text x={n.w / 2} y={29} textAnchor="middle" fontSize={8}
+                  <text x={n.w / 2} y={29} textAnchor="middle" fontSize={level === "operation" ? 7 : 8}
                     fill={dim ? "#94a3b8" : clr.text} opacity={dim ? 0.5 : 0.6} fontFamily={font}>
                     {sublabel}
                   </text>
@@ -582,7 +781,7 @@ export default function DataFlowMap() {
             const outE = laidOutEdges.filter(e => e.from === hovNode);
             const inTotal = inE.reduce((a, e) => a + e.count, 0);
             const outTotal = outE.reduce((a, e) => a + e.count, 0);
-            const pW = 260, pH = 70;
+            const pW = 280, pH = 70;
             const pX = 8, pY = vbH - pH - 8;
             return (
               <g style={{ pointerEvents: "none" }}>
@@ -609,6 +808,11 @@ export default function DataFlowMap() {
                     Click to see individual stations in this group
                   </text>
                 )}
+                {level === "station" && (
+                  <text x={pX + 10} y={pY + 58} fontSize={8} fill="#0284c7" fontWeight={700} fontFamily={font}>
+                    Click to see operations at this station
+                  </text>
+                )}
               </g>
             );
           })()}
@@ -617,17 +821,21 @@ export default function DataFlowMap() {
 
       {/* ── Interactive Summary Cards ── */}
       {(() => {
-        const deptCount = classData ? classData.department.nodes.length : 0;
-        const groupCount = classData ? classData.group.nodes.length : 0;
-        const stationCount = classData ? classData.station.nodes.length : 0;
-        const deptPaths = classData ? classData.department.edges.length : 0;
-        const groupPaths = classData ? classData.group.edges.length : 0;
-        const stationPaths = classData ? classData.station.edges.length : 0;
+        const src = partFlowLevel || classData;
+        const deptCount = src ? src.department.nodes.length : 0;
+        const groupCount = src ? src.group.nodes.length : 0;
+        const stationCount = src ? src.station.nodes.length : 0;
+        const opCount = src && src.operation ? src.operation.nodes.length : 0;
+        const deptPaths = src ? src.department.edges.length : 0;
+        const groupPaths = src ? src.group.edges.length : 0;
+        const stationPaths = src ? src.station.edges.length : 0;
+        const opPaths = src && src.operation ? src.operation.edges.length : 0;
 
         const cards = [
           { label: "DEPARTMENTS", count: deptCount, paths: deptPaths, lvl: "department", active: level === "department" },
           { label: "MACHINE GROUPS", count: groupCount, paths: groupPaths, lvl: "group", active: level === "group" },
           { label: "STATIONS", count: stationCount, paths: stationPaths, lvl: "station", active: level === "station" },
+          { label: "OPERATIONS", count: opCount, paths: opPaths, lvl: "operation", active: level === "operation" },
         ];
 
         return (
@@ -635,12 +843,13 @@ export default function DataFlowMap() {
             {cards.map(c => (
               <div key={c.lvl} onClick={() => {
                 setLevel(c.lvl);
-                if (c.lvl === "department") { setDeptFilter(null); setGroupFilter(null); }
-                if (c.lvl === "group") { setGroupFilter(null); }
+                if (c.lvl === "department") { setDeptFilter(null); setGroupFilter(null); setStationFilter(null); }
+                if (c.lvl === "group") { setGroupFilter(null); setStationFilter(null); }
+                if (c.lvl === "station") { setStationFilter(null); }
                 setHovNode(null); setHovEdge(null);
               }}
                 style={{
-                  flex: 1, minWidth: 160, padding: "10px 14px", borderRadius: 6, cursor: "pointer",
+                  flex: 1, minWidth: 140, padding: "10px 14px", borderRadius: 6, cursor: "pointer",
                   background: c.active ? "#0284c7" : "#fff",
                   border: c.active ? "1.5px solid #0284c7" : "1.5px solid #e2e8f0",
                   transition: "all 0.15s",
@@ -664,22 +873,25 @@ export default function DataFlowMap() {
 
             {/* Parts card */}
             <div style={{
-              flex: 1, minWidth: 160, padding: "10px 14px", borderRadius: 6,
-              background: "#f8fafc", border: "1.5px solid #e2e8f0",
+              flex: 1, minWidth: 140, padding: "10px 14px", borderRadius: 6,
+              background: partFilter ? "#0284c7" : "#f8fafc",
+              border: partFilter ? "1.5px solid #0284c7" : "1.5px solid #e2e8f0",
             }}>
-              <div style={{ fontSize: 9, letterSpacing: 1.5, color: "#94a3b8", fontFamily: font, marginBottom: 4 }}>
-                PRODUCT PARTS
+              <div style={{ fontSize: 9, letterSpacing: 1.5, color: partFilter ? "#bae6fd" : "#94a3b8", fontFamily: font, marginBottom: 4 }}>
+                {partFilter ? "SELECTED PART" : "PRODUCT PARTS"}
               </div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                <span style={{ fontSize: 22, fontWeight: 700, color: "#1e293b", fontFamily: font }}>
-                  {classData ? classData.totalParts.toLocaleString() : 0}
+                <span style={{ fontSize: partFilter ? 16 : 22, fontWeight: 700, color: partFilter ? "#fff" : "#1e293b", fontFamily: font }}>
+                  {partFilter || (classData ? classData.totalParts.toLocaleString() : 0)}
                 </span>
-                <span style={{ fontSize: 10, color: "#64748b", fontFamily: font }}>
-                  unique RTIDs
-                </span>
+                {!partFilter && (
+                  <span style={{ fontSize: 10, color: "#64748b", fontFamily: font }}>
+                    unique RTIDs
+                  </span>
+                )}
               </div>
-              <div style={{ fontSize: 10, color: "#64748b", fontFamily: font, marginTop: 2 }}>
-                {selectedClass}
+              <div style={{ fontSize: 10, color: partFilter ? "#e0f2fe" : "#64748b", fontFamily: font, marginTop: 2 }}>
+                {partFilter ? (availableParts.find(p => p.id === partFilter)?.desc || selectedClass) : selectedClass}
               </div>
             </div>
           </div>
@@ -725,7 +937,9 @@ export default function DataFlowMap() {
           ? "CLICK A DEPARTMENT TO SEE ITS MACHINE GROUPS. USE THE DROPDOWN TO FILTER BY PRODUCT CLASS."
           : level === "group"
           ? "CLICK A MACHINE GROUP TO SEE ITS STATIONS. USE BREADCRUMBS TO GO BACK."
-          : "USE DEPT OR GROUP FILTERS TO NARROW DOWN. USE BREADCRUMBS TO GO BACK."}
+          : level === "station"
+          ? "CLICK A STATION TO SEE ITS OPERATIONS. USE DEPT OR GROUP FILTERS TO NARROW DOWN."
+          : "USE THE STATION FILTER TO FOCUS ON A SINGLE STATION'S OPERATIONS. USE BREADCRUMBS TO GO BACK."}
       </div>
     </div>
   );
