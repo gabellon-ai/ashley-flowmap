@@ -608,27 +608,76 @@ export default function DataFlowMap() {
         </svg>
       </div>
 
-      {/* ── Stats bar ── */}
-      <div style={{ display: "flex", gap: 20, marginTop: 10, flexWrap: "wrap", alignItems: "center",
-        borderTop: "1px solid #cbd5e1", paddingTop: 8 }}>
-        <span style={{ color: "#1e293b", fontSize: 10, fontWeight: 700, fontFamily: font }}>
-          {selectedClass}
-        </span>
-        <span style={{ color: "#64748b", fontSize: 10, fontFamily: font }}>
-          {classData?.totalParts.toLocaleString()} parts
-        </span>
-        <span style={{ color: "#94a3b8", fontSize: 10 }}>·</span>
-        <span style={{ color: "#64748b", fontSize: 10, fontFamily: font }}>
-          {laidOutNodes.length} {level === "department" ? "departments" : level === "group" ? "machine groups" : "stations"} shown
-        </span>
-        <span style={{ color: "#94a3b8", fontSize: 10 }}>·</span>
-        <span style={{ color: "#64748b", fontSize: 10, fontFamily: font }}>
-          {laidOutEdges.length} routing paths
-        </span>
-        <span style={{ color: "#94a3b8", fontSize: 10, marginLeft: "auto", fontFamily: font }}>
-          Data sourced from Casegoods Fab routing data
-        </span>
-      </div>
+      {/* ── Interactive Summary Cards ── */}
+      {(() => {
+        const deptCount = classData ? classData.department.nodes.length : 0;
+        const groupCount = classData ? classData.group.nodes.length : 0;
+        const stationCount = classData ? classData.station.nodes.length : 0;
+        const deptPaths = classData ? classData.department.edges.length : 0;
+        const groupPaths = classData ? classData.group.edges.length : 0;
+        const stationPaths = classData ? classData.station.edges.length : 0;
+
+        const cards = [
+          { label: "DEPARTMENTS", count: deptCount, paths: deptPaths, lvl: "department", active: level === "department" },
+          { label: "MACHINE GROUPS", count: groupCount, paths: groupPaths, lvl: "group", active: level === "group" },
+          { label: "STATIONS", count: stationCount, paths: stationPaths, lvl: "station", active: level === "station" },
+        ];
+
+        return (
+          <div style={{ display: "flex", gap: 10, marginTop: 12, flexWrap: "wrap", borderTop: "1px solid #cbd5e1", paddingTop: 10 }}>
+            {cards.map(c => (
+              <div key={c.lvl} onClick={() => {
+                setLevel(c.lvl);
+                if (c.lvl === "department") { setDeptFilter(null); setGroupFilter(null); }
+                if (c.lvl === "group") { setGroupFilter(null); }
+                setHovNode(null); setHovEdge(null);
+              }}
+                style={{
+                  flex: 1, minWidth: 160, padding: "10px 14px", borderRadius: 6, cursor: "pointer",
+                  background: c.active ? "#0284c7" : "#fff",
+                  border: c.active ? "1.5px solid #0284c7" : "1.5px solid #e2e8f0",
+                  transition: "all 0.15s",
+                }}>
+                <div style={{ fontSize: 9, letterSpacing: 1.5, color: c.active ? "#bae6fd" : "#94a3b8", fontFamily: font, marginBottom: 4 }}>
+                  {c.label}
+                </div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                  <span style={{ fontSize: 22, fontWeight: 700, color: c.active ? "#fff" : "#1e293b", fontFamily: font }}>
+                    {c.count}
+                  </span>
+                  <span style={{ fontSize: 10, color: c.active ? "#bae6fd" : "#64748b", fontFamily: font }}>
+                    nodes
+                  </span>
+                </div>
+                <div style={{ fontSize: 10, color: c.active ? "#e0f2fe" : "#64748b", fontFamily: font, marginTop: 2 }}>
+                  {c.paths.toLocaleString()} unique routing paths
+                </div>
+              </div>
+            ))}
+
+            {/* Parts card */}
+            <div style={{
+              flex: 1, minWidth: 160, padding: "10px 14px", borderRadius: 6,
+              background: "#f8fafc", border: "1.5px solid #e2e8f0",
+            }}>
+              <div style={{ fontSize: 9, letterSpacing: 1.5, color: "#94a3b8", fontFamily: font, marginBottom: 4 }}>
+                PRODUCT PARTS
+              </div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                <span style={{ fontSize: 22, fontWeight: 700, color: "#1e293b", fontFamily: font }}>
+                  {classData ? classData.totalParts.toLocaleString() : 0}
+                </span>
+                <span style={{ fontSize: 10, color: "#64748b", fontFamily: font }}>
+                  unique RTIDs
+                </span>
+              </div>
+              <div style={{ fontSize: 10, color: "#64748b", fontFamily: font, marginTop: 2 }}>
+                {selectedClass}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* ── Department color legend ── */}
       <div style={{ display: "flex", gap: 10, marginTop: 8, flexWrap: "wrap", alignItems: "center" }}>
