@@ -239,14 +239,21 @@ export default function DataFlowMap() {
 
   const bnColor = (score) => {
     if (score == null) return "#cbd5e1";
+    // Vivid green → yellow → red
     if (score <= 0.5) {
       const t = score / 0.5;
-      return `rgb(${Math.round(34 + t * 168)},${Math.round(197 + t * (138 - 197))},${Math.round(94 + t * (4 - 94))})`;
+      const r = Math.round(22 + t * (234 - 22));
+      const g = Math.round(197 + t * (179 - 197));
+      const b = Math.round(71 + t * (8 - 71));
+      return `rgb(${r},${g},${b})`;
     }
     const t = (score - 0.5) / 0.5;
-    return `rgb(${Math.round(202 + t * 18)},${Math.round(138 - t * 138)},4)`;
+    const r = Math.round(234 + t * (220 - 234));
+    const g = Math.round(179 - t * 179);
+    const b = Math.round(8);
+    return `rgb(${r},${g},${b})`;
   };
-  const bnWidth = (score) => score == null ? 1 : 1.5 + score * 2.5;
+  const bnWidth = (score) => score == null ? 1 : 3 + score * 4; // 3px min → 7px max
 
   const isConn = (nid, e) => e.from === nid || e.to === nid;
   const eOpacity = (e, i) => {
@@ -695,19 +702,19 @@ export default function DataFlowMap() {
       <div style={{ display: "flex", gap: 14, marginTop: 8, alignItems: "center", flexWrap: "wrap" }}>
         <span style={{ color: "#475569", fontSize: 9, letterSpacing: 1.5, fontFamily: font }}>BOTTLENECK RISK:</span>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "2px solid #22c55e" }} />
-          <span style={{ color: "#475569", fontSize: 9, fontFamily: font }}>LOW</span>
+          <div style={{ width: 18, height: 18, borderRadius: 3, background: "#f8fafc", border: "3.5px solid #16c547" }} />
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: font, fontWeight: 700 }}>LOW</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "2.5px solid #ca8a04" }} />
-          <span style={{ color: "#475569", fontSize: 9, fontFamily: font }}>MED</span>
+          <div style={{ width: 18, height: 18, borderRadius: 3, background: "#f8fafc", border: "4.5px solid #eab308" }} />
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: font, fontWeight: 700 }}>MED</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 14, height: 14, borderRadius: 2, background: "#f8fafc", border: "3.5px solid #dc0004" }} />
-          <span style={{ color: "#475569", fontSize: 9, fontFamily: font }}>HIGH</span>
+          <div style={{ width: 18, height: 18, borderRadius: 3, background: "#f8fafc", border: "5.5px solid #dc0008" }} />
+          <span style={{ color: "#475569", fontSize: 9, fontFamily: font, fontWeight: 700 }}>HIGH</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 5, marginLeft: 4 }}>
-          <div style={{ width: 40, height: 4, borderRadius: 2, background: "linear-gradient(to right, #22c55e, #ca8a04, #dc0004)" }} />
+          <div style={{ width: 50, height: 6, borderRadius: 3, background: "linear-gradient(to right, #16c547, #eab308, #dc0008)" }} />
           <span style={{ color: "#475569", fontSize: 9, fontFamily: font }}>BORDER = CONVERGENCE PRESSURE</span>
         </div>
       </div>
