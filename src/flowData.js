@@ -2,442 +2,831 @@ export const STATIONS = {
   "CS143": {
     "id": "CS143",
     "department": "SAW",
+    "group": "Panel Saws",
     "description": "Panel Saw #5"
   },
   "CR179": {
     "id": "CR179",
     "department": "ROUTER",
-    "description": "Shape Router"
+    "group": "Shape Routers",
+    "description": "Shape Router #1"
   },
   "CB301": {
     "id": "CB301",
     "department": "DRILL",
+    "group": "Drills",
     "description": "Cut Length & Drill"
   },
   "CF425": {
     "id": "CF425",
     "department": "FINISH",
+    "group": "Stain",
     "description": "Dip Stain"
   },
   "HSRIS": {
     "id": "HSRIS",
     "department": "STAGING",
-    "description": "Finish"
+    "group": "Staging",
+    "description": "Review / Staging"
   },
   "CS429": {
     "id": "CS429",
     "department": "SAW",
+    "group": "Chop Saws",
     "description": "Chop Saw #3"
   },
   "CB242": {
     "id": "CB242",
     "department": "DRILL",
+    "group": "Drills",
     "description": "Drill #2"
   },
   "CS128": {
     "id": "CS128",
     "department": "SAW",
+    "group": "JK Saws",
     "description": "JK Saw (Jr.)"
   },
   "CS142": {
     "id": "CS142",
     "department": "SAW",
+    "group": "Panel Saws",
     "description": "Panel Saw #4"
   },
   "CS124": {
     "id": "CS124",
     "department": "SAW",
+    "group": "Angular Saws",
     "description": "Angular Saw #2"
   },
   "CR189": {
     "id": "CR189",
     "department": "ROUTER",
+    "group": "CNC Routers",
     "description": "Router #2"
   },
   "CS330": {
     "id": "CS330",
     "department": "SAW",
-    "description": "Chop Saw"
+    "group": "Chop Saws",
+    "description": "Chop Saw #1"
   },
   "CS877": {
     "id": "CS877",
     "department": "SAW",
+    "group": "Sanders",
     "description": "Sander / Planer"
   },
   "CE592": {
     "id": "CE592",
     "department": "EDGE / FOIL",
+    "group": "Specialty Foilers",
     "description": "Bluffcut Foiler"
   },
   "CE279": {
     "id": "CE279",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #12"
   },
   "CERIS": {
     "id": "CERIS",
     "department": "EDGE / FOIL",
-    "description": "Foiler"
+    "group": "Review",
+    "description": "Foil Review"
   },
   "CS123": {
     "id": "CS123",
     "department": "SAW",
+    "group": "Angular Saws",
     "description": "Angular Saw #1"
   },
   "CR219": {
     "id": "CR219",
     "department": "ROUTER",
+    "group": "Shape Routers",
     "description": "Shape Router #3"
   },
   "CF305": {
     "id": "CF305",
     "department": "FINISH",
+    "group": "Spray",
     "description": "Spray Finish"
   },
   "WPRIS": {
     "id": "WPRIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CT005": {
     "id": "CT005",
     "department": "CUT / PROFILE",
+    "group": "Profile",
     "description": "Profile & Cut"
   },
   "OLRIS": {
     "id": "OLRIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CE204": {
     "id": "CE204",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #6"
   },
   "CD221": {
     "id": "CD221",
     "department": "DOVETAIL",
+    "group": "Dovetail",
     "description": "Dovetail Machine"
   },
   "CE602": {
     "id": "CE602",
     "department": "EDGE / FOIL",
+    "group": "Edge Banders",
     "description": "Edge Bander #1"
   },
   "CB517": {
     "id": "CB517",
     "department": "DRILL",
+    "group": "Dowel Drills",
     "description": "Drill & Dowel #2"
   },
   "CR177": {
     "id": "CR177",
     "department": "ROUTER",
+    "group": "CNC Routers",
     "description": "CNC Router #1"
   },
   "CS603": {
     "id": "CS603",
     "department": "SAW",
+    "group": "Miter Saws",
     "description": "Miter Saw"
   },
   "CP432": {
     "id": "CP432",
     "department": "PRESS / MISC",
+    "group": "Mold",
     "description": "T-Mold"
   },
   "CE665": {
     "id": "CE665",
     "department": "EDGE / FOIL",
+    "group": "Edge Banders",
     "description": "Stefani Edge Bander"
   },
   "CB270": {
     "id": "CB270",
     "department": "DRILL",
+    "group": "Dowel Drills",
     "description": "Dowel & Drill"
   },
   "CS796": {
     "id": "CS796",
     "department": "SAW",
+    "group": "Notch Saws",
     "description": "Notch Saw"
   },
   "CR220": {
     "id": "CR220",
     "department": "ROUTER",
+    "group": "Shape Routers",
     "description": "Shape Router #4"
   },
   "CB283": {
     "id": "CB283",
     "department": "DRILL",
+    "group": "Drills",
     "description": "Drill #3"
   },
   "APRIS": {
     "id": "APRIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CR218": {
     "id": "CR218",
     "department": "ROUTER",
+    "group": "Shape Routers",
     "description": "Shape Router #2"
   },
   "CB202": {
     "id": "CB202",
     "department": "DRILL",
+    "group": "Drill & Size",
     "description": "Drill & Size #1"
   },
   "CS414": {
     "id": "CS414",
     "department": "SAW",
+    "group": "Chop Saws",
     "description": "Chop Saw #2"
   },
   "CE182": {
     "id": "CE182",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #3"
   },
   "CS204": {
     "id": "CS204",
     "department": "SAW",
+    "group": "Sanders",
     "description": "Offset Sander / Chamfer"
   },
   "CE210": {
     "id": "CE210",
     "department": "EDGE / FOIL",
+    "group": "Multi-Edge Foilers",
     "description": "Multi-Edge Foiler #2"
   },
   "CE202": {
     "id": "CE202",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #5"
   },
   "CE207": {
     "id": "CE207",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #9"
   },
   "CE203": {
     "id": "CE203",
     "department": "EDGE / FOIL",
+    "group": "Multi-Edge Foilers",
     "description": "Multi-Edge Foiler #1"
   },
   "CE180": {
     "id": "CE180",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #2"
   },
   "CS601": {
     "id": "CS601",
     "department": "SAW",
+    "group": "Miter Saws",
     "description": "Miter / Dado"
   },
   "CB506": {
     "id": "CB506",
     "department": "DRILL",
+    "group": "Drills",
     "description": "Drill #4"
   },
   "CE635": {
     "id": "CE635",
     "department": "EDGE / FOIL",
+    "group": "Multi-Edge Banders",
     "description": "Multi-Edge Bander #1"
   },
   "CE212": {
     "id": "CE212",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #11"
   },
   "CB290": {
     "id": "CB290",
     "department": "DRILL",
+    "group": "Drill & Size",
     "description": "Size & Drill #2"
   },
   "CE303": {
     "id": "CE303",
     "department": "EDGE / FOIL",
+    "group": "Shape & Foil",
     "description": "Shape & Foil"
   },
   "CFRIS": {
     "id": "CFRIS",
     "department": "FINISH",
-    "description": "Review / Staging"
+    "group": "Review",
+    "description": "Finish Review"
   },
   "DFRIS": {
     "id": "DFRIS",
     "department": "STAGING",
-    "description": "Drill"
+    "group": "Staging",
+    "description": "Review / Staging"
   },
   "CS613": {
     "id": "CS613",
     "department": "SAW",
+    "group": "Cut & Assemble",
     "description": "Cut & Assemble #1"
   },
   "CR210": {
     "id": "CR210",
     "department": "ROUTER",
+    "group": "Specialty Routers",
     "description": "Glue Router"
   },
   "CE637": {
     "id": "CE637",
     "department": "EDGE / FOIL",
+    "group": "Multi-Edge Banders",
     "description": "Multi-Edge Bander #2"
   },
   "CE211": {
     "id": "CE211",
     "department": "EDGE / FOIL",
+    "group": "Multi-Edge Foilers",
     "description": "Multi-Edge Foiler #3"
   },
   "CE614": {
     "id": "CE614",
     "department": "EDGE / FOIL",
+    "group": "Edge Banders",
     "description": "Edge Bander #2"
   },
   "CS132": {
     "id": "CS132",
     "department": "SAW",
+    "group": "Panel Saws",
     "description": "Panel Saw #3"
   },
   "CB279": {
     "id": "CB279",
     "department": "DRILL",
+    "group": "Drill & Size",
     "description": "Size / Drill / Chamfer"
   },
   "CR180": {
     "id": "CR180",
     "department": "ROUTER",
+    "group": "Shape Routers",
     "description": "Shape & Drill Router"
   },
   "CP322": {
     "id": "CP322",
     "department": "PRESS / MISC",
+    "group": "Glue-Up",
     "description": "Glue-Up #1"
   },
   "CP327": {
     "id": "CP327",
     "department": "PRESS / MISC",
+    "group": "Glue-Up",
     "description": "Glue-Up #2"
   },
   "CE206": {
     "id": "CE206",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #8"
   },
   "CE488": {
     "id": "CE488",
     "department": "EDGE / FOIL",
+    "group": "Specialty Foilers",
     "description": "Fletcher Foiler"
   },
   "CE205": {
     "id": "CE205",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #7"
   },
   "CP201": {
     "id": "CP201",
     "department": "PRESS / MISC",
+    "group": "Press",
     "description": "Emboss / Print"
   },
   "CE208": {
     "id": "CE208",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #10"
   },
   "CA460": {
     "id": "CA460",
     "department": "ASSEMBLY",
+    "group": "Loading",
     "description": "Skid Loading"
   },
   "CA411": {
     "id": "CA411",
     "department": "ASSEMBLY",
+    "group": "Sub-Assembly",
     "description": "Sub-Assembly #1"
   },
   "CS134": {
     "id": "CS134",
     "department": "SAW",
+    "group": "Beam Saws",
     "description": "Beam Saw #1"
   },
   "CV006": {
     "id": "CV006",
     "department": "HARDWARE",
+    "group": "Rivet",
     "description": "Rivet Station"
   },
   "DCRIS": {
     "id": "DCRIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CF006": {
     "id": "CF006",
     "department": "FINISH",
+    "group": "Print",
     "description": "Print Pattern"
   },
   "CS135": {
     "id": "CS135",
     "department": "SAW",
+    "group": "Beam Saws",
     "description": "Beam Saw #2"
   },
   "CE116": {
     "id": "CE116",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #1"
   },
   "SWRIS": {
     "id": "SWRIS",
     "department": "STAGING",
-    "description": "SWRIS"
+    "group": "Staging",
+    "description": "Review / Staging"
   },
   "CE185": {
     "id": "CE185",
     "department": "EDGE / FOIL",
+    "group": "Foilers",
     "description": "Foiler #4"
   },
   "CE201": {
     "id": "CE201",
     "department": "EDGE / FOIL",
+    "group": "Cut-to-Size",
     "description": "Cut-to-Size"
   },
   "BARIS": {
     "id": "BARIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CS747": {
     "id": "CS747",
     "department": "SAW",
+    "group": "Cut & Assemble",
     "description": "Cut & Assemble #3"
   },
   "CS615": {
     "id": "CS615",
     "department": "SAW",
+    "group": "Cut & Assemble",
     "description": "Cut & Assemble #2"
   },
   "CA863": {
     "id": "CA863",
     "department": "ASSEMBLY",
+    "group": "Sub-Assembly",
     "description": "Top Assembly"
   },
   "TBRIS": {
     "id": "TBRIS",
     "department": "STAGING",
+    "group": "Staging",
     "description": "Review / Staging"
   },
   "CA860": {
     "id": "CA860",
     "department": "ASSEMBLY",
+    "group": "Sub-Assembly",
     "description": "Block Apply"
   },
   "CS619": {
     "id": "CS619",
     "department": "SAW",
+    "group": "Cut & Assemble",
     "description": "Angle Cut"
   },
   "CP102": {
     "id": "CP102",
     "department": "PRESS / MISC",
+    "group": "Press",
     "description": "Drill & Press"
   },
   "SCRIS": {
     "id": "SCRIS",
     "department": "STAGING",
-    "description": "Saw"
+    "group": "Staging",
+    "description": "Review / Staging"
+  }
+};
+
+export const MACHINE_GROUPS = {
+  "Panel Saws": {
+    "id": "Panel Saws",
+    "department": "SAW",
+    "stations": [
+      "CS143",
+      "CS142",
+      "CS132"
+    ]
+  },
+  "Shape Routers": {
+    "id": "Shape Routers",
+    "department": "ROUTER",
+    "stations": [
+      "CR179",
+      "CR219",
+      "CR220",
+      "CR218",
+      "CR180"
+    ]
+  },
+  "Drills": {
+    "id": "Drills",
+    "department": "DRILL",
+    "stations": [
+      "CB301",
+      "CB242",
+      "CB283",
+      "CB506"
+    ]
+  },
+  "Stain": {
+    "id": "Stain",
+    "department": "FINISH",
+    "stations": [
+      "CF425"
+    ]
+  },
+  "Staging": {
+    "id": "Staging",
+    "department": "STAGING",
+    "stations": [
+      "HSRIS",
+      "WPRIS",
+      "OLRIS",
+      "APRIS",
+      "DFRIS",
+      "DCRIS",
+      "SWRIS",
+      "BARIS",
+      "TBRIS",
+      "SCRIS"
+    ]
+  },
+  "Chop Saws": {
+    "id": "Chop Saws",
+    "department": "SAW",
+    "stations": [
+      "CS429",
+      "CS330",
+      "CS414"
+    ]
+  },
+  "JK Saws": {
+    "id": "JK Saws",
+    "department": "SAW",
+    "stations": [
+      "CS128"
+    ]
+  },
+  "Angular Saws": {
+    "id": "Angular Saws",
+    "department": "SAW",
+    "stations": [
+      "CS124",
+      "CS123"
+    ]
+  },
+  "CNC Routers": {
+    "id": "CNC Routers",
+    "department": "ROUTER",
+    "stations": [
+      "CR189",
+      "CR177"
+    ]
+  },
+  "Sanders": {
+    "id": "Sanders",
+    "department": "SAW",
+    "stations": [
+      "CS877",
+      "CS204"
+    ]
+  },
+  "Specialty Foilers": {
+    "id": "Specialty Foilers",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE592",
+      "CE488"
+    ]
+  },
+  "Foilers": {
+    "id": "Foilers",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE279",
+      "CE204",
+      "CE182",
+      "CE202",
+      "CE207",
+      "CE180",
+      "CE212",
+      "CE206",
+      "CE205",
+      "CE208",
+      "CE116",
+      "CE185"
+    ]
+  },
+  "Review": {
+    "id": "Review",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CERIS",
+      "CFRIS"
+    ]
+  },
+  "Spray": {
+    "id": "Spray",
+    "department": "FINISH",
+    "stations": [
+      "CF305"
+    ]
+  },
+  "Profile": {
+    "id": "Profile",
+    "department": "CUT / PROFILE",
+    "stations": [
+      "CT005"
+    ]
+  },
+  "Dovetail": {
+    "id": "Dovetail",
+    "department": "DOVETAIL",
+    "stations": [
+      "CD221"
+    ]
+  },
+  "Edge Banders": {
+    "id": "Edge Banders",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE602",
+      "CE665",
+      "CE614"
+    ]
+  },
+  "Dowel Drills": {
+    "id": "Dowel Drills",
+    "department": "DRILL",
+    "stations": [
+      "CB517",
+      "CB270"
+    ]
+  },
+  "Miter Saws": {
+    "id": "Miter Saws",
+    "department": "SAW",
+    "stations": [
+      "CS603",
+      "CS601"
+    ]
+  },
+  "Mold": {
+    "id": "Mold",
+    "department": "PRESS / MISC",
+    "stations": [
+      "CP432"
+    ]
+  },
+  "Notch Saws": {
+    "id": "Notch Saws",
+    "department": "SAW",
+    "stations": [
+      "CS796"
+    ]
+  },
+  "Drill & Size": {
+    "id": "Drill & Size",
+    "department": "DRILL",
+    "stations": [
+      "CB202",
+      "CB290",
+      "CB279"
+    ]
+  },
+  "Multi-Edge Foilers": {
+    "id": "Multi-Edge Foilers",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE210",
+      "CE203",
+      "CE211"
+    ]
+  },
+  "Multi-Edge Banders": {
+    "id": "Multi-Edge Banders",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE635",
+      "CE637"
+    ]
+  },
+  "Shape & Foil": {
+    "id": "Shape & Foil",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE303"
+    ]
+  },
+  "Cut & Assemble": {
+    "id": "Cut & Assemble",
+    "department": "SAW",
+    "stations": [
+      "CS613",
+      "CS747",
+      "CS615",
+      "CS619"
+    ]
+  },
+  "Specialty Routers": {
+    "id": "Specialty Routers",
+    "department": "ROUTER",
+    "stations": [
+      "CR210"
+    ]
+  },
+  "Glue-Up": {
+    "id": "Glue-Up",
+    "department": "PRESS / MISC",
+    "stations": [
+      "CP322",
+      "CP327"
+    ]
+  },
+  "Press": {
+    "id": "Press",
+    "department": "PRESS / MISC",
+    "stations": [
+      "CP201",
+      "CP102"
+    ]
+  },
+  "Loading": {
+    "id": "Loading",
+    "department": "ASSEMBLY",
+    "stations": [
+      "CA460"
+    ]
+  },
+  "Sub-Assembly": {
+    "id": "Sub-Assembly",
+    "department": "ASSEMBLY",
+    "stations": [
+      "CA411",
+      "CA863",
+      "CA860"
+    ]
+  },
+  "Beam Saws": {
+    "id": "Beam Saws",
+    "department": "SAW",
+    "stations": [
+      "CS134",
+      "CS135"
+    ]
+  },
+  "Rivet": {
+    "id": "Rivet",
+    "department": "HARDWARE",
+    "stations": [
+      "CV006"
+    ]
+  },
+  "Print": {
+    "id": "Print",
+    "department": "FINISH",
+    "stations": [
+      "CF006"
+    ]
+  },
+  "Cut-to-Size": {
+    "id": "Cut-to-Size",
+    "department": "EDGE / FOIL",
+    "stations": [
+      "CE201"
+    ]
   }
 };
 
@@ -500,6 +889,92 @@ export const FLOW_DATA = {
         {
           "from": "CUT / PROFILE",
           "to": "STAGING",
+          "count": 1
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Panel Saws",
+          "count": 12
+        },
+        {
+          "id": "Sanders",
+          "count": 4
+        },
+        {
+          "id": "Drills",
+          "count": 3
+        },
+        {
+          "id": "Shape Routers",
+          "count": 2
+        },
+        {
+          "id": "Chop Saws",
+          "count": 2
+        },
+        {
+          "id": "Profile",
+          "count": 1
+        },
+        {
+          "id": "Staging",
+          "count": 1
+        },
+        {
+          "id": "Angular Saws",
+          "count": 1
+        },
+        {
+          "id": "JK Saws",
+          "count": 1
+        },
+        {
+          "id": "Press",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 4
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Profile",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
           "count": 1
         }
       ]
@@ -634,6 +1109,34 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Drills",
+          "count": 17
+        },
+        {
+          "id": "Chop Saws",
+          "count": 2
+        },
+        {
+          "id": "Sanders",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -715,6 +1218,70 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 5
+        },
+        {
+          "id": "Shape Routers",
+          "count": 3
+        },
+        {
+          "id": "CNC Routers",
+          "count": 3
+        },
+        {
+          "id": "Profile",
+          "count": 2
+        },
+        {
+          "id": "Staging",
+          "count": 2
+        },
+        {
+          "id": "Drills",
+          "count": 1
+        },
+        {
+          "id": "Sanders",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Profile",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Profile",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "CNC Routers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -738,11 +1305,11 @@ export const FLOW_DATA = {
           "count": 2
         },
         {
-          "id": "CS877",
-          "count": 2
+          "id": "CB283",
+          "count": 1
         },
         {
-          "id": "CB283",
+          "id": "CS877",
           "count": 1
         },
         {
@@ -778,11 +1345,6 @@ export const FLOW_DATA = {
         {
           "from": "CB283",
           "to": "OLRIS",
-          "count": 1
-        },
-        {
-          "from": "CS877",
-          "to": "CS877",
           "count": 1
         },
         {
@@ -848,6 +1410,120 @@ export const FLOW_DATA = {
         {
           "from": "ROUTER",
           "to": "SAW",
+          "count": 1
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Drills",
+          "count": 24
+        },
+        {
+          "id": "Chop Saws",
+          "count": 23
+        },
+        {
+          "id": "Panel Saws",
+          "count": 20
+        },
+        {
+          "id": "Sanders",
+          "count": 16
+        },
+        {
+          "id": "JK Saws",
+          "count": 11
+        },
+        {
+          "id": "Foilers",
+          "count": 6
+        },
+        {
+          "id": "CNC Routers",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 11
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 10
+        },
+        {
+          "from": "Sanders",
+          "to": "Chop Saws",
+          "count": 6
+        },
+        {
+          "from": "Foilers",
+          "to": "Chop Saws",
+          "count": 6
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 5
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 5
+        },
+        {
+          "from": "Drills",
+          "to": "Chop Saws",
+          "count": 3
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
           "count": 1
         }
       ]
@@ -1023,6 +1699,29 @@ export const FLOW_DATA = {
       ],
       "edges": []
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Panel Saws",
+          "count": 13
+        },
+        {
+          "id": "Angular Saws",
+          "count": 7
+        },
+        {
+          "id": "Sanders",
+          "count": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 2
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -1069,6 +1768,52 @@ export const FLOW_DATA = {
           "from": "SAW",
           "to": "DRILL",
           "count": 4
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Sanders",
+          "count": 14
+        },
+        {
+          "id": "Panel Saws",
+          "count": 8
+        },
+        {
+          "id": "Drills",
+          "count": 4
+        },
+        {
+          "id": "Chop Saws",
+          "count": 2
+        },
+        {
+          "id": "Angular Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 5
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 1
         }
       ]
     },
@@ -1285,6 +2030,284 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Dovetail",
+          "count": 430
+        },
+        {
+          "id": "Angular Saws",
+          "count": 382
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 335
+        },
+        {
+          "id": "Foilers",
+          "count": 71
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 41
+        },
+        {
+          "id": "JK Saws",
+          "count": 37
+        },
+        {
+          "id": "Review",
+          "count": 33
+        },
+        {
+          "id": "Sub-Assembly",
+          "count": 23
+        },
+        {
+          "id": "Miter Saws",
+          "count": 23
+        },
+        {
+          "id": "Staging",
+          "count": 19
+        },
+        {
+          "id": "Stain",
+          "count": 13
+        },
+        {
+          "id": "Shape Routers",
+          "count": 10
+        },
+        {
+          "id": "CNC Routers",
+          "count": 7
+        },
+        {
+          "id": "Press",
+          "count": 4
+        },
+        {
+          "id": "Drills",
+          "count": 3
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 2
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "id": "Sanders",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Dovetail",
+          "count": 329
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 272
+        },
+        {
+          "from": "Foilers",
+          "to": "Dovetail",
+          "count": 70
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 58
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Multi-Edge Foilers",
+          "count": 36
+        },
+        {
+          "from": "Dovetail",
+          "to": "Review",
+          "count": 33
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 32
+        },
+        {
+          "from": "Sub-Assembly",
+          "to": "Dovetail",
+          "count": 23
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 22
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 14
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Stain",
+          "count": 13
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 11
+        },
+        {
+          "from": "Dovetail",
+          "to": "Miter Saws",
+          "count": 8
+        },
+        {
+          "from": "Stain",
+          "to": "Staging",
+          "count": 8
+        },
+        {
+          "from": "Dovetail",
+          "to": "CNC Routers",
+          "count": 6
+        },
+        {
+          "from": "Stain",
+          "to": "JK Saws",
+          "count": 5
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Staging",
+          "count": 5
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 5
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Dovetail",
+          "count": 5
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Press",
+          "count": 4
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Specialty Foilers",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 3
+        },
+        {
+          "from": "Dovetail",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Miter Saws",
+          "to": "JK Saws",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Staging",
+          "count": 3
+        },
+        {
+          "from": "Press",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Press",
+          "to": "Multi-Edge Foilers",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Dovetail",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Dovetail",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -1312,24 +2335,16 @@ export const FLOW_DATA = {
           "count": 37
         },
         {
-          "id": "CE592",
-          "count": 37
-        },
-        {
           "id": "CE202",
           "count": 37
         },
         {
-          "id": "CE204",
-          "count": 33
+          "id": "CE592",
+          "count": 36
         },
         {
           "id": "CERIS",
           "count": 33
-        },
-        {
-          "id": "CE279",
-          "count": 29
         },
         {
           "id": "CS123",
@@ -1340,8 +2355,16 @@ export const FLOW_DATA = {
           "count": 23
         },
         {
+          "id": "CE204",
+          "count": 17
+        },
+        {
+          "id": "CE279",
+          "count": 15
+        },
+        {
           "id": "CS601",
-          "count": 21
+          "count": 15
         },
         {
           "id": "HSRIS",
@@ -1466,11 +2489,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE204",
-          "to": "CE204",
-          "count": 16
-        },
-        {
-          "from": "CE204",
           "to": "CD221",
           "count": 16
         },
@@ -1488,11 +2506,6 @@ export const FLOW_DATA = {
           "from": "CE592",
           "to": "CE211",
           "count": 15
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 14
         },
         {
           "from": "CE279",
@@ -1547,11 +2560,6 @@ export const FLOW_DATA = {
         {
           "from": "CD221",
           "to": "CR177",
-          "count": 6
-        },
-        {
-          "from": "CS601",
-          "to": "CS601",
           "count": 6
         },
         {
@@ -1680,11 +2688,6 @@ export const FLOW_DATA = {
           "count": 1
         },
         {
-          "from": "CE592",
-          "to": "CE592",
-          "count": 1
-        },
-        {
           "from": "CS128",
           "to": "CS601",
           "count": 1
@@ -1795,6 +2798,182 @@ export const FLOW_DATA = {
         {
           "from": "SAW",
           "to": "STAGING",
+          "count": 1
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 61
+        },
+        {
+          "id": "CNC Routers",
+          "count": 35
+        },
+        {
+          "id": "Edge Banders",
+          "count": 23
+        },
+        {
+          "id": "JK Saws",
+          "count": 13
+        },
+        {
+          "id": "Shape Routers",
+          "count": 8
+        },
+        {
+          "id": "Drills",
+          "count": 7
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 6
+        },
+        {
+          "id": "Mold",
+          "count": 4
+        },
+        {
+          "id": "Miter Saws",
+          "count": 3
+        },
+        {
+          "id": "Drill & Size",
+          "count": 2
+        },
+        {
+          "id": "Notch Saws",
+          "count": 1
+        },
+        {
+          "id": "Foilers",
+          "count": 1
+        },
+        {
+          "id": "Press",
+          "count": 1
+        },
+        {
+          "id": "Chop Saws",
+          "count": 1
+        },
+        {
+          "id": "Staging",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 29
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 18
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 7
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Dowel Drills",
+          "count": 6
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 5
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 5
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Mold",
+          "count": 4
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Press",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Staging",
           "count": 1
         }
       ]
@@ -2209,6 +3388,567 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 1118
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 509
+        },
+        {
+          "id": "Shape Routers",
+          "count": 385
+        },
+        {
+          "id": "CNC Routers",
+          "count": 199
+        },
+        {
+          "id": "Drill & Size",
+          "count": 188
+        },
+        {
+          "id": "Foilers",
+          "count": 182
+        },
+        {
+          "id": "Miter Saws",
+          "count": 181
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 128
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 117
+        },
+        {
+          "id": "Staging",
+          "count": 86
+        },
+        {
+          "id": "Spray",
+          "count": 69
+        },
+        {
+          "id": "JK Saws",
+          "count": 66
+        },
+        {
+          "id": "Drills",
+          "count": 36
+        },
+        {
+          "id": "Specialty Routers",
+          "count": 28
+        },
+        {
+          "id": "Panel Saws",
+          "count": 22
+        },
+        {
+          "id": "Edge Banders",
+          "count": 14
+        },
+        {
+          "id": "Stain",
+          "count": 13
+        },
+        {
+          "id": "Sanders",
+          "count": 11
+        },
+        {
+          "id": "Glue-Up",
+          "count": 11
+        },
+        {
+          "id": "Review",
+          "count": 5
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 4
+        },
+        {
+          "id": "Press",
+          "count": 2
+        },
+        {
+          "id": "Chop Saws",
+          "count": 1
+        },
+        {
+          "id": "Cut-to-Size",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 444
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 158
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 150
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 137
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 133
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 129
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Multi-Edge Banders",
+          "count": 101
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Dowel Drills",
+          "count": 58
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 55
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Dowel Drills",
+          "count": 53
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 50
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 49
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Multi-Edge Foilers",
+          "count": 48
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Miter Saws",
+          "count": 48
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Drill & Size",
+          "count": 44
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 40
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 38
+        },
+        {
+          "from": "JK Saws",
+          "to": "Staging",
+          "count": 30
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Routers",
+          "count": 27
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 27
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Staging",
+          "count": 26
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 20
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 16
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 13
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Shape Routers",
+          "count": 11
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Miter Saws",
+          "count": 11
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Spray",
+          "count": 10
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 10
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drills",
+          "count": 9
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 9
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 9
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 9
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 9
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Staging",
+          "count": 8
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 8
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 8
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Stain",
+          "count": 8
+        },
+        {
+          "from": "Stain",
+          "to": "Staging",
+          "count": 8
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Staging",
+          "count": 7
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drill & Size",
+          "count": 7
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 7
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Spray",
+          "count": 6
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 6
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Shape Routers",
+          "count": 6
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape Routers",
+          "count": 6
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Foilers",
+          "count": 6
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Stain",
+          "count": 5
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Drill & Size",
+          "count": 4
+        },
+        {
+          "from": "Drills",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 4
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Review",
+          "count": 4
+        },
+        {
+          "from": "Stain",
+          "to": "JK Saws",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Staging",
+          "count": 4
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Dowel Drills",
+          "count": 3
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "CNC Routers",
+          "count": 3
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Review",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Stain",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Cut-to-Size",
+          "count": 1
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Specialty Routers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -2253,7 +3993,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE202",
-          "count": 78
+          "count": 73
         },
         {
           "id": "CF305",
@@ -2268,12 +4008,12 @@ export const FLOW_DATA = {
           "count": 65
         },
         {
-          "id": "CS601",
-          "count": 60
+          "id": "CE279",
+          "count": 49
         },
         {
-          "id": "CE279",
-          "count": 55
+          "id": "CS601",
+          "count": 47
         },
         {
           "id": "DFRIS",
@@ -2281,7 +4021,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE204",
-          "count": 40
+          "count": 39
         },
         {
           "id": "CB283",
@@ -2298,10 +4038,6 @@ export const FLOW_DATA = {
         {
           "id": "CB279",
           "count": 21
-        },
-        {
-          "id": "CE602",
-          "count": 18
         },
         {
           "id": "TBRIS",
@@ -2332,6 +4068,10 @@ export const FLOW_DATA = {
           "count": 12
         },
         {
+          "id": "CE602",
+          "count": 10
+        },
+        {
           "id": "CS877",
           "count": 9
         },
@@ -2342,10 +4082,6 @@ export const FLOW_DATA = {
         {
           "id": "CE205",
           "count": 9
-        },
-        {
-          "id": "CE592",
-          "count": 8
         },
         {
           "id": "CS142",
@@ -2376,6 +4112,10 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
+          "id": "CE592",
+          "count": 4
+        },
+        {
           "id": "CERIS",
           "count": 4
         },
@@ -2385,10 +4125,6 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE212",
-          "count": 3
-        },
-        {
-          "id": "CP102",
           "count": 3
         },
         {
@@ -2413,6 +4149,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE665",
+          "count": 2
+        },
+        {
+          "id": "CP102",
           "count": 2
         },
         {
@@ -2595,11 +4335,6 @@ export const FLOW_DATA = {
           "count": 15
         },
         {
-          "from": "CS601",
-          "to": "CS601",
-          "count": 13
-        },
-        {
           "from": "CE202",
           "to": "CR218",
           "count": 12
@@ -2665,11 +4400,6 @@ export const FLOW_DATA = {
           "count": 8
         },
         {
-          "from": "CE602",
-          "to": "CE602",
-          "count": 8
-        },
-        {
           "from": "CS128",
           "to": "TBRIS",
           "count": 8
@@ -2722,11 +4452,6 @@ export const FLOW_DATA = {
         {
           "from": "CE207",
           "to": "CB283",
-          "count": 6
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
           "count": 6
         },
         {
@@ -2790,11 +4515,6 @@ export const FLOW_DATA = {
           "count": 5
         },
         {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 5
-        },
-        {
           "from": "CS601",
           "to": "CF425",
           "count": 5
@@ -2851,11 +4571,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CS124",
-          "to": "CE592",
-          "count": 4
-        },
-        {
-          "from": "CE592",
           "to": "CE592",
           "count": 4
         },
@@ -3216,11 +4931,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE204",
-          "to": "CE204",
-          "count": 1
-        },
-        {
-          "from": "CE204",
           "to": "CB270",
           "count": 1
         },
@@ -3347,11 +5057,6 @@ export const FLOW_DATA = {
         {
           "from": "CE185",
           "to": "DFRIS",
-          "count": 1
-        },
-        {
-          "from": "CP102",
-          "to": "CP102",
           "count": 1
         }
       ]
@@ -3498,6 +5203,589 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "JK Saws",
+          "count": 1447
+        },
+        {
+          "id": "Foilers",
+          "count": 984
+        },
+        {
+          "id": "Sanders",
+          "count": 845
+        },
+        {
+          "id": "Drill & Size",
+          "count": 542
+        },
+        {
+          "id": "Drills",
+          "count": 480
+        },
+        {
+          "id": "Chop Saws",
+          "count": 175
+        },
+        {
+          "id": "Shape Routers",
+          "count": 158
+        },
+        {
+          "id": "Miter Saws",
+          "count": 143
+        },
+        {
+          "id": "Angular Saws",
+          "count": 125
+        },
+        {
+          "id": "Panel Saws",
+          "count": 77
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 55
+        },
+        {
+          "id": "Staging",
+          "count": 45
+        },
+        {
+          "id": "Spray",
+          "count": 36
+        },
+        {
+          "id": "CNC Routers",
+          "count": 29
+        },
+        {
+          "id": "Profile",
+          "count": 14
+        },
+        {
+          "id": "Edge Banders",
+          "count": 10
+        },
+        {
+          "id": "Notch Saws",
+          "count": 6
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 6
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 4
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 4
+        },
+        {
+          "id": "Cut & Assemble",
+          "count": 3
+        },
+        {
+          "id": "Review",
+          "count": 2
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 846
+        },
+        {
+          "from": "Sanders",
+          "to": "Drill & Size",
+          "count": 298
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
+          "count": 271
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 248
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 156
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drill & Size",
+          "count": 150
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 140
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 125
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 124
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 110
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Sanders",
+          "count": 92
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 79
+        },
+        {
+          "from": "Sanders",
+          "to": "Foilers",
+          "count": 65
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 59
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 56
+        },
+        {
+          "from": "Foilers",
+          "to": "Drill & Size",
+          "count": 49
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 36
+        },
+        {
+          "from": "Drills",
+          "to": "Miter Saws",
+          "count": 30
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Drill & Size",
+          "count": 30
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 22
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Drills",
+          "count": 21
+        },
+        {
+          "from": "Drills",
+          "to": "Sanders",
+          "count": 19
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Drills",
+          "count": 18
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 17
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Staging",
+          "count": 16
+        },
+        {
+          "from": "JK Saws",
+          "to": "Staging",
+          "count": 15
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drills",
+          "count": 13
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 12
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 12
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 12
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drills",
+          "count": 10
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 10
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 9
+        },
+        {
+          "from": "Foilers",
+          "to": "Staging",
+          "count": 9
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Sanders",
+          "count": 8
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 8
+        },
+        {
+          "from": "Profile",
+          "to": "Dowel Drills",
+          "count": 8
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 7
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drill & Size",
+          "count": 7
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Sanders",
+          "count": 7
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 6
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 6
+        },
+        {
+          "from": "Spray",
+          "to": "Miter Saws",
+          "count": 6
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Miter Saws",
+          "count": 5
+        },
+        {
+          "from": "Sanders",
+          "to": "Dowel Drills",
+          "count": 5
+        },
+        {
+          "from": "JK Saws",
+          "to": "Dowel Drills",
+          "count": 5
+        },
+        {
+          "from": "Sanders",
+          "to": "Chop Saws",
+          "count": 5
+        },
+        {
+          "from": "Sanders",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "JK Saws",
+          "count": 4
+        },
+        {
+          "from": "Sanders",
+          "to": "Profile",
+          "count": 4
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Notch Saws",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Profile",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 3
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Spray",
+          "count": 3
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Miter Saws",
+          "count": 3
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Staging",
+          "count": 3
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "JK Saws",
+          "count": 3
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drill & Size",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Specialty Foilers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Notch Saws",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Chop Saws",
+          "count": 2
+        },
+        {
+          "from": "Drills",
+          "to": "Staging",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 2
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Profile",
+          "to": "Drill & Size",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drills",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -3506,7 +5794,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CS204",
-          "count": 683
+          "count": 660
         },
         {
           "id": "CB202",
@@ -3518,15 +5806,11 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE202",
-          "count": 336
+          "count": 324
         },
         {
           "id": "CE180",
           "count": 212
-        },
-        {
-          "id": "CB242",
-          "count": 197
         },
         {
           "id": "CS877",
@@ -3541,12 +5825,16 @@ export const FLOW_DATA = {
           "count": 165
         },
         {
+          "id": "CB242",
+          "count": 163
+        },
+        {
           "id": "CB283",
           "count": 161
         },
         {
           "id": "CE212",
-          "count": 125
+          "count": 115
         },
         {
           "id": "CR219",
@@ -3569,24 +5857,24 @@ export const FLOW_DATA = {
           "count": 67
         },
         {
-          "id": "CE279",
-          "count": 66
-        },
-        {
           "id": "CS143",
           "count": 65
         },
         {
           "id": "CB517",
-          "count": 45
+          "count": 44
         },
         {
           "id": "CE205",
-          "count": 45
+          "count": 39
         },
         {
           "id": "CF305",
           "count": 36
+        },
+        {
+          "id": "CE279",
+          "count": 35
         },
         {
           "id": "CE182",
@@ -3609,10 +5897,6 @@ export const FLOW_DATA = {
           "count": 21
         },
         {
-          "id": "CE208",
-          "count": 20
-        },
-        {
           "id": "CR218",
           "count": 15
         },
@@ -3629,23 +5913,19 @@ export const FLOW_DATA = {
           "count": 11
         },
         {
+          "id": "CE208",
+          "count": 10
+        },
+        {
           "id": "CR179",
           "count": 10
         },
         {
-          "id": "CE204",
-          "count": 9
-        },
-        {
-          "id": "CE614",
-          "count": 9
-        },
-        {
-          "id": "CE602",
+          "id": "CS132",
           "count": 8
         },
         {
-          "id": "CS132",
+          "id": "CE204",
           "count": 8
         },
         {
@@ -3655,6 +5935,14 @@ export const FLOW_DATA = {
         {
           "id": "CS796",
           "count": 6
+        },
+        {
+          "id": "CE614",
+          "count": 5
+        },
+        {
+          "id": "CE602",
+          "count": 4
         },
         {
           "id": "CE203",
@@ -3669,12 +5957,12 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
-          "id": "CE592",
+          "id": "CS613",
           "count": 3
         },
         {
-          "id": "CS613",
-          "count": 3
+          "id": "CE592",
+          "count": 2
         },
         {
           "id": "CERIS",
@@ -3689,10 +5977,6 @@ export const FLOW_DATA = {
           "count": 2
         },
         {
-          "id": "CE303",
-          "count": 2
-        },
-        {
           "id": "CE488",
           "count": 2
         },
@@ -3702,6 +5986,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE665",
+          "count": 1
+        },
+        {
+          "id": "CE303",
           "count": 1
         }
       ],
@@ -3832,19 +6120,9 @@ export const FLOW_DATA = {
           "count": 35
         },
         {
-          "from": "CB242",
-          "to": "CB242",
-          "count": 34
-        },
-        {
           "from": "CS128",
           "to": "CE205",
           "count": 33
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 31
         },
         {
           "from": "CE206",
@@ -3870,11 +6148,6 @@ export const FLOW_DATA = {
           "from": "CB283",
           "to": "CS603",
           "count": 26
-        },
-        {
-          "from": "CS204",
-          "to": "CS204",
-          "count": 23
         },
         {
           "from": "CS128",
@@ -3978,11 +6251,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE202",
-          "to": "CE202",
-          "count": 12
-        },
-        {
-          "from": "CE202",
           "to": "CB283",
           "count": 12
         },
@@ -4022,11 +6290,6 @@ export const FLOW_DATA = {
           "count": 10
         },
         {
-          "from": "CE212",
-          "to": "CE212",
-          "count": 10
-        },
-        {
           "from": "CS603",
           "to": "CB242",
           "count": 10
@@ -4039,11 +6302,6 @@ export const FLOW_DATA = {
         {
           "from": "CE182",
           "to": "CR219",
-          "count": 10
-        },
-        {
-          "from": "CE208",
-          "to": "CE208",
           "count": 10
         },
         {
@@ -4143,11 +6401,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE205",
-          "to": "CE205",
-          "count": 6
-        },
-        {
-          "from": "CE205",
           "to": "CE180",
           "count": 6
         },
@@ -4208,11 +6461,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE202",
-          "to": "CE602",
-          "count": 4
-        },
-        {
-          "from": "CE602",
           "to": "CE602",
           "count": 4
         },
@@ -4309,11 +6557,6 @@ export const FLOW_DATA = {
         {
           "from": "CS143",
           "to": "CE207",
-          "count": 4
-        },
-        {
-          "from": "CE614",
-          "to": "CE614",
           "count": 4
         },
         {
@@ -4702,11 +6945,6 @@ export const FLOW_DATA = {
           "count": 1
         },
         {
-          "from": "CE592",
-          "to": "CE592",
-          "count": 1
-        },
-        {
           "from": "CR177",
           "to": "CF305",
           "count": 1
@@ -4763,11 +7001,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE204",
-          "to": "CE204",
-          "count": 1
-        },
-        {
-          "from": "CE204",
           "to": "CR177",
           "count": 1
         },
@@ -4814,11 +7047,6 @@ export const FLOW_DATA = {
         {
           "from": "CS123",
           "to": "CT005",
-          "count": 1
-        },
-        {
-          "from": "CB517",
-          "to": "CB517",
           "count": 1
         },
         {
@@ -4898,11 +7126,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE204",
-          "to": "CE303",
-          "count": 1
-        },
-        {
-          "from": "CE303",
           "to": "CE303",
           "count": 1
         },
@@ -5005,6 +7228,94 @@ export const FLOW_DATA = {
           "from": "EDGE / FOIL",
           "to": "ROUTER",
           "count": 5
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Panel Saws",
+          "count": 230
+        },
+        {
+          "id": "Foilers",
+          "count": 87
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 62
+        },
+        {
+          "id": "CNC Routers",
+          "count": 19
+        },
+        {
+          "id": "Angular Saws",
+          "count": 5
+        },
+        {
+          "id": "Shape Routers",
+          "count": 3
+        },
+        {
+          "id": "Drills",
+          "count": 2
+        },
+        {
+          "id": "JK Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Panel Saws",
+          "to": "Dowel Drills",
+          "count": 58
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Foilers",
+          "count": 58
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 17
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Foilers",
+          "count": 17
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 7
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 5
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 2
         }
       ]
     },
@@ -5141,11 +7452,39 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Chop Saws",
+          "count": 128
+        },
+        {
+          "id": "Sanders",
+          "count": 119
+        },
+        {
+          "id": "Loading",
+          "count": 8
+        }
+      ],
+      "edges": [
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 119
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Loading",
+          "count": 8
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
           "id": "CS414",
-          "count": 136
+          "count": 128
         },
         {
           "id": "CS877",
@@ -5161,11 +7500,6 @@ export const FLOW_DATA = {
           "from": "CS414",
           "to": "CS877",
           "count": 119
-        },
-        {
-          "from": "CS414",
-          "to": "CS414",
-          "count": 8
         },
         {
           "from": "CS414",
@@ -5282,6 +7616,334 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 417
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 212
+        },
+        {
+          "id": "Foilers",
+          "count": 184
+        },
+        {
+          "id": "JK Saws",
+          "count": 172
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 172
+        },
+        {
+          "id": "Shape Routers",
+          "count": 40
+        },
+        {
+          "id": "Sanders",
+          "count": 40
+        },
+        {
+          "id": "CNC Routers",
+          "count": 37
+        },
+        {
+          "id": "Edge Banders",
+          "count": 33
+        },
+        {
+          "id": "Drills",
+          "count": 32
+        },
+        {
+          "id": "Miter Saws",
+          "count": 22
+        },
+        {
+          "id": "Panel Saws",
+          "count": 5
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "id": "Review",
+          "count": 4
+        },
+        {
+          "id": "Spray",
+          "count": 3
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "id": "Drill & Size",
+          "count": 1
+        },
+        {
+          "id": "Staging",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 201
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 154
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 130
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 35
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 33
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 22
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 21
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 17
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 16
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "CNC Routers",
+          "count": 16
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "JK Saws",
+          "count": 13
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 13
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Foilers",
+          "count": 11
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 11
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 11
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Banders",
+          "count": 10
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 10
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 6
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 5
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 5
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 5
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Miter Saws",
+          "to": "CNC Routers",
+          "count": 3
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Review",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Review",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "JK Saws",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Staging",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -5297,20 +7959,12 @@ export const FLOW_DATA = {
           "count": 149
         },
         {
-          "id": "CE208",
-          "count": 110
-        },
-        {
           "id": "CS123",
           "count": 95
         },
         {
           "id": "CE210",
           "count": 84
-        },
-        {
-          "id": "CE202",
-          "count": 73
         },
         {
           "id": "CE203",
@@ -5321,8 +7975,12 @@ export const FLOW_DATA = {
           "count": 63
         },
         {
-          "id": "CE279",
-          "count": 57
+          "id": "CE208",
+          "count": 63
+        },
+        {
+          "id": "CE202",
+          "count": 62
         },
         {
           "id": "CE207",
@@ -5330,7 +7988,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CS204",
-          "count": 42
+          "count": 40
         },
         {
           "id": "CR177",
@@ -5342,11 +8000,11 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE212",
-          "count": 32
+          "count": 28
         },
         {
-          "id": "CE614",
-          "count": 26
+          "id": "CE279",
+          "count": 25
         },
         {
           "id": "CR218",
@@ -5355,6 +8013,10 @@ export const FLOW_DATA = {
         {
           "id": "CS601",
           "count": 21
+        },
+        {
+          "id": "CE614",
+          "count": 18
         },
         {
           "id": "CE182",
@@ -5373,16 +8035,16 @@ export const FLOW_DATA = {
           "count": 15
         },
         {
-          "id": "CE204",
-          "count": 13
-        },
-        {
           "id": "CR219",
           "count": 11
         },
         {
           "id": "CE602",
           "count": 11
+        },
+        {
+          "id": "CE204",
+          "count": 8
         },
         {
           "id": "CS132",
@@ -5455,11 +8117,6 @@ export const FLOW_DATA = {
           "count": 58
         },
         {
-          "from": "CE208",
-          "to": "CE208",
-          "count": 47
-        },
-        {
           "from": "CS124",
           "to": "CE210",
           "count": 45
@@ -5473,11 +8130,6 @@ export const FLOW_DATA = {
           "from": "CS123",
           "to": "CE210",
           "count": 34
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 32
         },
         {
           "from": "CE202",
@@ -5545,11 +8197,6 @@ export const FLOW_DATA = {
           "count": 11
         },
         {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 11
-        },
-        {
           "from": "CS124",
           "to": "CS601",
           "count": 11
@@ -5605,11 +8252,6 @@ export const FLOW_DATA = {
           "count": 9
         },
         {
-          "from": "CE614",
-          "to": "CE614",
-          "count": 8
-        },
-        {
           "from": "CS128",
           "to": "CE204",
           "count": 8
@@ -5655,11 +8297,6 @@ export const FLOW_DATA = {
           "count": 5
         },
         {
-          "from": "CE204",
-          "to": "CE204",
-          "count": 5
-        },
-        {
           "from": "CS128",
           "to": "CE210",
           "count": 5
@@ -5682,11 +8319,6 @@ export const FLOW_DATA = {
         {
           "from": "CE204",
           "to": "CE182",
-          "count": 4
-        },
-        {
-          "from": "CE212",
-          "to": "CE212",
           "count": 4
         },
         {
@@ -5782,11 +8414,6 @@ export const FLOW_DATA = {
         {
           "from": "CS204",
           "to": "CF305",
-          "count": 2
-        },
-        {
-          "from": "CS204",
-          "to": "CS204",
           "count": 2
         },
         {
@@ -6030,6 +8657,151 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Foilers",
+          "count": 372
+        },
+        {
+          "id": "JK Saws",
+          "count": 344
+        },
+        {
+          "id": "Sanders",
+          "count": 60
+        },
+        {
+          "id": "Shape Routers",
+          "count": 60
+        },
+        {
+          "id": "Spray",
+          "count": 40
+        },
+        {
+          "id": "Angular Saws",
+          "count": 31
+        },
+        {
+          "id": "Miter Saws",
+          "count": 16
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 13
+        },
+        {
+          "id": "Review",
+          "count": 13
+        },
+        {
+          "id": "CNC Routers",
+          "count": 3
+        },
+        {
+          "id": "Drills",
+          "count": 3
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 336
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 60
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 56
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 38
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 23
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 16
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 13
+        },
+        {
+          "from": "Spray",
+          "to": "Review",
+          "count": 13
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 7
+        },
+        {
+          "from": "JK Saws",
+          "to": "Specialty Foilers",
+          "count": 6
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -6038,7 +8810,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE202",
-          "count": 205
+          "count": 197
         },
         {
           "id": "CE212",
@@ -6046,11 +8818,11 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE207",
-          "count": 91
+          "count": 81
         },
         {
           "id": "CS204",
-          "count": 63
+          "count": 60
         },
         {
           "id": "CR219",
@@ -6070,7 +8842,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE204",
-          "count": 23
+          "count": 19
         },
         {
           "id": "CS124",
@@ -6078,7 +8850,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE205",
-          "count": 17
+          "count": 16
         },
         {
           "id": "CS603",
@@ -6101,12 +8873,12 @@ export const FLOW_DATA = {
           "count": 13
         },
         {
-          "id": "CE279",
+          "id": "CR180",
           "count": 6
         },
         {
-          "id": "CR180",
-          "count": 6
+          "id": "CE279",
+          "count": 4
         },
         {
           "id": "CR189",
@@ -6222,11 +8994,6 @@ export const FLOW_DATA = {
           "count": 12
         },
         {
-          "from": "CE207",
-          "to": "CE207",
-          "count": 10
-        },
-        {
           "from": "CE204",
           "to": "CE182",
           "count": 9
@@ -6235,11 +9002,6 @@ export const FLOW_DATA = {
           "from": "CE182",
           "to": "CS603",
           "count": 9
-        },
-        {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 8
         },
         {
           "from": "CE212",
@@ -6288,11 +9050,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE204",
-          "to": "CE204",
-          "count": 4
-        },
-        {
-          "from": "CE204",
           "to": "CS603",
           "count": 4
         },
@@ -6317,11 +9074,6 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
-          "from": "CS204",
-          "to": "CS204",
-          "count": 3
-        },
-        {
           "from": "CS123",
           "to": "CE592",
           "count": 3
@@ -6335,11 +9087,6 @@ export const FLOW_DATA = {
           "from": "CS123",
           "to": "CE204",
           "count": 3
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 2
         },
         {
           "from": "CE279",
@@ -6363,11 +9110,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE592",
-          "to": "CE205",
-          "count": 1
-        },
-        {
-          "from": "CE205",
           "to": "CE205",
           "count": 1
         },
@@ -6521,6 +9263,244 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 246
+        },
+        {
+          "id": "Shape Routers",
+          "count": 236
+        },
+        {
+          "id": "Foilers",
+          "count": 184
+        },
+        {
+          "id": "Miter Saws",
+          "count": 148
+        },
+        {
+          "id": "JK Saws",
+          "count": 42
+        },
+        {
+          "id": "Panel Saws",
+          "count": 39
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 38
+        },
+        {
+          "id": "CNC Routers",
+          "count": 30
+        },
+        {
+          "id": "Staging",
+          "count": 20
+        },
+        {
+          "id": "Drill & Size",
+          "count": 16
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 13
+        },
+        {
+          "id": "Review",
+          "count": 13
+        },
+        {
+          "id": "Drills",
+          "count": 6
+        },
+        {
+          "id": "Edge Banders",
+          "count": 6
+        },
+        {
+          "id": "Spray",
+          "count": 4
+        },
+        {
+          "id": "Sanders",
+          "count": 2
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 140
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 139
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 77
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 41
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 38
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 29
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 28
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Shape Routers",
+          "count": 24
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 21
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Staging",
+          "count": 20
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 18
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 17
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 16
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Miter Saws",
+          "count": 16
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 15
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape & Foil",
+          "count": 13
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "JK Saws",
+          "count": 13
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Review",
+          "count": 13
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 9
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape Routers",
+          "count": 9
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 7
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 6
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 4
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Drills",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "Miter Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -6533,7 +9513,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE204",
-          "count": 117
+          "count": 91
         },
         {
           "id": "CR218",
@@ -6588,10 +9568,6 @@ export const FLOW_DATA = {
           "count": 20
         },
         {
-          "id": "CE279",
-          "count": 17
-        },
-        {
           "id": "CB290",
           "count": 16
         },
@@ -6605,6 +9581,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE180",
+          "count": 9
+        },
+        {
+          "id": "CE279",
           "count": 9
         },
         {
@@ -6688,11 +9668,6 @@ export const FLOW_DATA = {
         {
           "from": "CE182",
           "to": "CR179",
-          "count": 26
-        },
-        {
-          "from": "CE204",
-          "to": "CE204",
           "count": 26
         },
         {
@@ -6802,11 +9777,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CS124",
-          "to": "CE279",
-          "count": 8
-        },
-        {
-          "from": "CE279",
           "to": "CE279",
           "count": 8
         },
@@ -7072,6 +10042,109 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Miter Saws",
+          "count": 72
+        },
+        {
+          "id": "Angular Saws",
+          "count": 68
+        },
+        {
+          "id": "Shape Routers",
+          "count": 51
+        },
+        {
+          "id": "Foilers",
+          "count": 51
+        },
+        {
+          "id": "CNC Routers",
+          "count": 9
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 4
+        },
+        {
+          "id": "JK Saws",
+          "count": 4
+        },
+        {
+          "id": "Spray",
+          "count": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 50
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 49
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 33
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 14
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 12
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 9
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 6
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 4
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Spray",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -7084,19 +10157,19 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE202",
-          "count": 44
+          "count": 42
         },
         {
           "id": "CR218",
           "count": 35
         },
         {
-          "id": "CS601",
-          "count": 32
-        },
-        {
           "id": "CS123",
           "count": 24
+        },
+        {
+          "id": "CS601",
+          "count": 22
         },
         {
           "id": "CR219",
@@ -7164,11 +10237,6 @@ export const FLOW_DATA = {
         {
           "from": "CR219",
           "to": "CS603",
-          "count": 10
-        },
-        {
-          "from": "CS601",
-          "to": "CS601",
           "count": 10
         },
         {
@@ -7284,11 +10352,6 @@ export const FLOW_DATA = {
         {
           "from": "CE180",
           "to": "CR219",
-          "count": 2
-        },
-        {
-          "from": "CE202",
-          "to": "CE202",
           "count": 2
         },
         {
@@ -7411,6 +10474,350 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Foilers",
+          "count": 926
+        },
+        {
+          "id": "JK Saws",
+          "count": 838
+        },
+        {
+          "id": "Sanders",
+          "count": 255
+        },
+        {
+          "id": "Staging",
+          "count": 185
+        },
+        {
+          "id": "Shape Routers",
+          "count": 101
+        },
+        {
+          "id": "Miter Saws",
+          "count": 80
+        },
+        {
+          "id": "Drills",
+          "count": 69
+        },
+        {
+          "id": "Cut & Assemble",
+          "count": 62
+        },
+        {
+          "id": "Notch Saws",
+          "count": 52
+        },
+        {
+          "id": "Angular Saws",
+          "count": 45
+        },
+        {
+          "id": "Drill & Size",
+          "count": 28
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 22
+        },
+        {
+          "id": "Panel Saws",
+          "count": 18
+        },
+        {
+          "id": "Spray",
+          "count": 16
+        },
+        {
+          "id": "Review",
+          "count": 4
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "id": "Chop Saws",
+          "count": 3
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 3
+        },
+        {
+          "id": "CNC Routers",
+          "count": 1
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "id": "Edge Banders",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 816
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 219
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 83
+        },
+        {
+          "from": "Foilers",
+          "to": "Staging",
+          "count": 81
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 79
+        },
+        {
+          "from": "Sanders",
+          "to": "Foilers",
+          "count": 74
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Staging",
+          "count": 72
+        },
+        {
+          "from": "Foilers",
+          "to": "Cut & Assemble",
+          "count": 62
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 56
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 28
+        },
+        {
+          "from": "Drills",
+          "to": "Notch Saws",
+          "count": 26
+        },
+        {
+          "from": "Foilers",
+          "to": "Drill & Size",
+          "count": 26
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Notch Saws",
+          "count": 22
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 16
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Specialty Foilers",
+          "count": 15
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Staging",
+          "count": 15
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Sanders",
+          "count": 14
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 13
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 12
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 11
+        },
+        {
+          "from": "Spray",
+          "to": "Staging",
+          "count": 8
+        },
+        {
+          "from": "Sanders",
+          "to": "Staging",
+          "count": 7
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Shape Routers",
+          "count": 5
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Notch Saws",
+          "count": 4
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Specialty Foilers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Staging",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Specialty Foilers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "JK Saws",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Drill & Size",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drill & Size",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -7419,15 +10826,15 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE207",
-          "count": 428
+          "count": 425
         },
         {
           "id": "CE202",
-          "count": 360
+          "count": 346
         },
         {
           "id": "CS204",
-          "count": 238
+          "count": 236
         },
         {
           "id": "DFRIS",
@@ -7442,12 +10849,8 @@ export const FLOW_DATA = {
           "count": 144
         },
         {
-          "id": "CE208",
-          "count": 119
-        },
-        {
           "id": "CE212",
-          "count": 91
+          "count": 83
         },
         {
           "id": "CR219",
@@ -7458,10 +10861,6 @@ export const FLOW_DATA = {
           "count": 74
         },
         {
-          "id": "CE205",
-          "count": 58
-        },
-        {
           "id": "CS796",
           "count": 52
         },
@@ -7470,8 +10869,16 @@ export const FLOW_DATA = {
           "count": 49
         },
         {
+          "id": "CE208",
+          "count": 43
+        },
+        {
           "id": "CB283",
           "count": 42
+        },
+        {
+          "id": "CE205",
+          "count": 41
         },
         {
           "id": "CS124",
@@ -7492,10 +10899,6 @@ export const FLOW_DATA = {
         {
           "id": "CB242",
           "count": 22
-        },
-        {
-          "id": "CE279",
-          "count": 20
         },
         {
           "id": "CS877",
@@ -7522,7 +10925,7 @@ export const FLOW_DATA = {
           "count": 9
         },
         {
-          "id": "CE592",
+          "id": "CE279",
           "count": 8
         },
         {
@@ -7535,6 +10938,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CS123",
+          "count": 4
+        },
+        {
+          "id": "CE592",
           "count": 4
         },
         {
@@ -7558,10 +10965,6 @@ export const FLOW_DATA = {
           "count": 3
         },
         {
-          "id": "CE614",
-          "count": 2
-        },
-        {
           "id": "CR189",
           "count": 1
         },
@@ -7571,6 +10974,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE637",
+          "count": 1
+        },
+        {
+          "id": "CE614",
           "count": 1
         },
         {
@@ -7608,11 +11015,6 @@ export const FLOW_DATA = {
           "from": "CE202",
           "to": "CE206",
           "count": 86
-        },
-        {
-          "from": "CE208",
-          "to": "CE208",
-          "count": 76
         },
         {
           "from": "CS601",
@@ -7720,11 +11122,6 @@ export const FLOW_DATA = {
           "count": 18
         },
         {
-          "from": "CE205",
-          "to": "CE205",
-          "count": 17
-        },
-        {
           "from": "CS143",
           "to": "CS877",
           "count": 16
@@ -7780,18 +11177,8 @@ export const FLOW_DATA = {
           "count": 14
         },
         {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 14
-        },
-        {
           "from": "CS204",
           "to": "CB283",
-          "count": 12
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
           "count": 12
         },
         {
@@ -7827,11 +11214,6 @@ export const FLOW_DATA = {
         {
           "from": "CF305",
           "to": "DFRIS",
-          "count": 8
-        },
-        {
-          "from": "CE212",
-          "to": "CE212",
           "count": 8
         },
         {
@@ -7945,11 +11327,6 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
-          "from": "CE592",
-          "to": "CE592",
-          "count": 4
-        },
-        {
           "from": "CS204",
           "to": "CE212",
           "count": 4
@@ -8010,11 +11387,6 @@ export const FLOW_DATA = {
           "count": 3
         },
         {
-          "from": "CE207",
-          "to": "CE207",
-          "count": 3
-        },
-        {
           "from": "CS128",
           "to": "CE204",
           "count": 3
@@ -8046,11 +11418,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE279",
-          "to": "CS204",
-          "count": 2
-        },
-        {
-          "from": "CS204",
           "to": "CS204",
           "count": 2
         },
@@ -8205,11 +11572,6 @@ export const FLOW_DATA = {
           "count": 1
         },
         {
-          "from": "CE614",
-          "to": "CE614",
-          "count": 1
-        },
-        {
           "from": "CS128",
           "to": "CS204",
           "count": 1
@@ -8340,6 +11702,242 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 96
+        },
+        {
+          "id": "Edge Banders",
+          "count": 47
+        },
+        {
+          "id": "Foilers",
+          "count": 46
+        },
+        {
+          "id": "JK Saws",
+          "count": 41
+        },
+        {
+          "id": "Shape Routers",
+          "count": 39
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 32
+        },
+        {
+          "id": "Miter Saws",
+          "count": 16
+        },
+        {
+          "id": "Spray",
+          "count": 7
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 7
+        },
+        {
+          "id": "CNC Routers",
+          "count": 6
+        },
+        {
+          "id": "Sanders",
+          "count": 5
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 5
+        },
+        {
+          "id": "Drills",
+          "count": 4
+        },
+        {
+          "id": "Panel Saws",
+          "count": 1
+        },
+        {
+          "id": "Notch Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 35
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 33
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 16
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 14
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Dowel Drills",
+          "count": 14
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 13
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 11
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Miter Saws",
+          "count": 11
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 11
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Shape Routers",
+          "count": 6
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 4
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Drills",
+          "count": 4
+        },
+        {
+          "from": "Drills",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 3
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Spray",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Sanders",
+          "to": "Dowel Drills",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Multi-Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -8384,14 +11982,14 @@ export const FLOW_DATA = {
         },
         {
           "id": "CF305",
-          "count": 8
-        },
-        {
-          "id": "CE202",
           "count": 7
         },
         {
           "id": "CR177",
+          "count": 6
+        },
+        {
+          "id": "CE202",
           "count": 6
         },
         {
@@ -8716,11 +12314,6 @@ export const FLOW_DATA = {
           "count": 1
         },
         {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 1
-        },
-        {
           "from": "CR218",
           "to": "CB517",
           "count": 1
@@ -8742,11 +12335,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CR218",
-          "to": "CF305",
-          "count": 1
-        },
-        {
-          "from": "CF305",
           "to": "CF305",
           "count": 1
         }
@@ -8784,6 +12372,39 @@ export const FLOW_DATA = {
         {
           "from": "SAW",
           "to": "DRILL",
+          "count": 6
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Cut & Assemble",
+          "count": 15
+        },
+        {
+          "id": "Drills",
+          "count": 13
+        },
+        {
+          "id": "Sub-Assembly",
+          "count": 13
+        }
+      ],
+      "edges": [
+        {
+          "from": "Cut & Assemble",
+          "to": "Sub-Assembly",
+          "count": 7
+        },
+        {
+          "from": "Sub-Assembly",
+          "to": "Drills",
+          "count": 7
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Drills",
           "count": 6
         }
       ]
@@ -8911,6 +12532,296 @@ export const FLOW_DATA = {
         {
           "from": "SAW",
           "to": "FINISH",
+          "count": 1
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Foilers",
+          "count": 244
+        },
+        {
+          "id": "Angular Saws",
+          "count": 239
+        },
+        {
+          "id": "CNC Routers",
+          "count": 164
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 117
+        },
+        {
+          "id": "Spray",
+          "count": 90
+        },
+        {
+          "id": "Shape Routers",
+          "count": 81
+        },
+        {
+          "id": "JK Saws",
+          "count": 33
+        },
+        {
+          "id": "Edge Banders",
+          "count": 26
+        },
+        {
+          "id": "Miter Saws",
+          "count": 24
+        },
+        {
+          "id": "Panel Saws",
+          "count": 22
+        },
+        {
+          "id": "Sanders",
+          "count": 12
+        },
+        {
+          "id": "Drills",
+          "count": 12
+        },
+        {
+          "id": "Chop Saws",
+          "count": 9
+        },
+        {
+          "id": "Drill & Size",
+          "count": 5
+        },
+        {
+          "id": "Notch Saws",
+          "count": 4
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 214
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 144
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Spray",
+          "count": 85
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 70
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Dowel Drills",
+          "count": 47
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Dowel Drills",
+          "count": 24
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 23
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Miter Saws",
+          "count": 22
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Dowel Drills",
+          "count": 20
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 19
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 17
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 10
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 8
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 7
+        },
+        {
+          "from": "Sanders",
+          "to": "CNC Routers",
+          "count": 6
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 5
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 5
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 4
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 4
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Dowel Drills",
+          "count": 3
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Foilers",
+          "count": 3
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Notch Saws",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "from": "Drills",
+          "to": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Shape Routers",
           "count": 1
         }
       ]
@@ -9497,6 +13408,253 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 667
+        },
+        {
+          "id": "Drill & Size",
+          "count": 587
+        },
+        {
+          "id": "Miter Saws",
+          "count": 63
+        },
+        {
+          "id": "CNC Routers",
+          "count": 45
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 39
+        },
+        {
+          "id": "Shape Routers",
+          "count": 38
+        },
+        {
+          "id": "Drills",
+          "count": 36
+        },
+        {
+          "id": "Edge Banders",
+          "count": 36
+        },
+        {
+          "id": "Spray",
+          "count": 30
+        },
+        {
+          "id": "JK Saws",
+          "count": 27
+        },
+        {
+          "id": "Foilers",
+          "count": 25
+        },
+        {
+          "id": "Cut-to-Size",
+          "count": 14
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 6
+        },
+        {
+          "id": "Sanders",
+          "count": 5
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 564
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 35
+        },
+        {
+          "from": "Drills",
+          "to": "Dowel Drills",
+          "count": 28
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Shape Routers",
+          "count": 24
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 22
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 22
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 22
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 21
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 20
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drill & Size",
+          "count": 20
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Miter Saws",
+          "count": 18
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Spray",
+          "count": 18
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Cut-to-Size",
+          "count": 14
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 12
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "CNC Routers",
+          "count": 12
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 12
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 7
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Shape Routers",
+          "count": 5
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Multi-Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Drill & Size",
+          "count": 3
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -9533,7 +13691,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE602",
-          "count": 36
+          "count": 32
         },
         {
           "id": "CF305",
@@ -9739,11 +13897,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE602",
-          "to": "CE602",
-          "count": 4
-        },
-        {
-          "from": "CE602",
           "to": "CR179",
           "count": 4
         },
@@ -9918,6 +14071,71 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 101
+        },
+        {
+          "id": "Cut-to-Size",
+          "count": 70
+        },
+        {
+          "id": "Staging",
+          "count": 14
+        },
+        {
+          "id": "Drill & Size",
+          "count": 12
+        },
+        {
+          "id": "Shape Routers",
+          "count": 9
+        },
+        {
+          "id": "Foilers",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Cut-to-Size",
+          "count": 70
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Staging",
+          "count": 13
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 12
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 7
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Shape Routers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -10065,6 +14283,136 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Foilers",
+          "count": 218
+        },
+        {
+          "id": "JK Saws",
+          "count": 214
+        },
+        {
+          "id": "Miter Saws",
+          "count": 9
+        },
+        {
+          "id": "Sanders",
+          "count": 8
+        },
+        {
+          "id": "Review",
+          "count": 8
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 6
+        },
+        {
+          "id": "Angular Saws",
+          "count": 3
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 1
+        },
+        {
+          "id": "Drills",
+          "count": 1
+        },
+        {
+          "id": "Spray",
+          "count": 1
+        },
+        {
+          "id": "Staging",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 206
+        },
+        {
+          "from": "Sanders",
+          "to": "Foilers",
+          "count": 7
+        },
+        {
+          "from": "Foilers",
+          "to": "Review",
+          "count": 7
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Sanders",
+          "count": 6
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 5
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape & Foil",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Foilers",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 1
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Spray",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Staging",
+          "to": "Review",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -10073,7 +14421,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE207",
-          "count": 135
+          "count": 134
         },
         {
           "id": "CE202",
@@ -10093,7 +14441,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CS601",
-          "count": 10
+          "count": 9
         },
         {
           "id": "CS204",
@@ -10104,16 +14452,16 @@ export const FLOW_DATA = {
           "count": 7
         },
         {
-          "id": "CE592",
-          "count": 6
-        },
-        {
           "id": "CE303",
           "count": 6
         },
         {
           "id": "CS123",
           "count": 3
+        },
+        {
+          "id": "CE592",
+          "count": 1
         },
         {
           "id": "CB242",
@@ -10192,11 +14540,6 @@ export const FLOW_DATA = {
           "from": "CE207",
           "to": "CE212",
           "count": 6
-        },
-        {
-          "from": "CE592",
-          "to": "CE592",
-          "count": 5
         },
         {
           "from": "CE207",
@@ -10282,16 +14625,6 @@ export const FLOW_DATA = {
           "from": "CS204",
           "to": "CE207",
           "count": 1
-        },
-        {
-          "from": "CE207",
-          "to": "CE207",
-          "count": 1
-        },
-        {
-          "from": "CS601",
-          "to": "CS601",
-          "count": 1
         }
       ]
     }
@@ -10359,6 +14692,92 @@ export const FLOW_DATA = {
         {
           "from": "EDGE / FOIL",
           "to": "SAW",
+          "count": 1
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Cut & Assemble",
+          "count": 187
+        },
+        {
+          "id": "Sub-Assembly",
+          "count": 33
+        },
+        {
+          "id": "Profile",
+          "count": 18
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 15
+        },
+        {
+          "id": "Staging",
+          "count": 10
+        },
+        {
+          "id": "Shape Routers",
+          "count": 3
+        },
+        {
+          "id": "Edge Banders",
+          "count": 3
+        },
+        {
+          "id": "JK Saws",
+          "count": 1
+        },
+        {
+          "id": "Foilers",
+          "count": 1
+        },
+        {
+          "id": "Miter Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Sub-Assembly",
+          "to": "Profile",
+          "count": 17
+        },
+        {
+          "from": "Profile",
+          "to": "Multi-Edge Banders",
+          "count": 15
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Staging",
+          "count": 9
+        },
+        {
+          "from": "Profile",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Staging",
           "count": 1
         }
       ]
@@ -10492,6 +14911,34 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Staging",
+          "count": 17
+        },
+        {
+          "id": "Angular Saws",
+          "count": 12
+        },
+        {
+          "id": "Panel Saws",
+          "count": 4
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Staging",
+          "count": 12
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Staging",
+          "count": 4
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -10622,6 +15069,265 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 105
+        },
+        {
+          "id": "Specialty Routers",
+          "count": 86
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 31
+        },
+        {
+          "id": "Foilers",
+          "count": 30
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 22
+        },
+        {
+          "id": "Drill & Size",
+          "count": 16
+        },
+        {
+          "id": "Spray",
+          "count": 16
+        },
+        {
+          "id": "Edge Banders",
+          "count": 12
+        },
+        {
+          "id": "JK Saws",
+          "count": 8
+        },
+        {
+          "id": "Drills",
+          "count": 6
+        },
+        {
+          "id": "Shape Routers",
+          "count": 6
+        },
+        {
+          "id": "CNC Routers",
+          "count": 3
+        },
+        {
+          "id": "Miter Saws",
+          "count": 2
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 2
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 2
+        },
+        {
+          "id": "Review",
+          "count": 2
+        },
+        {
+          "id": "Panel Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Specialty Routers",
+          "count": 30
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 29
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 23
+        },
+        {
+          "from": "Foilers",
+          "to": "Specialty Routers",
+          "count": 23
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Specialty Routers",
+          "count": 21
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 19
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 16
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Spray",
+          "count": 11
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 11
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Specialty Routers",
+          "count": 10
+        },
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 5
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Specialty Routers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 2
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Spray",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -10637,18 +15343,6 @@ export const FLOW_DATA = {
           "count": 30
         },
         {
-          "id": "CE279",
-          "count": 24
-        },
-        {
-          "id": "CF305",
-          "count": 23
-        },
-        {
-          "id": "CE602",
-          "count": 20
-        },
-        {
           "id": "CE203",
           "count": 17
         },
@@ -10657,8 +15351,20 @@ export const FLOW_DATA = {
           "count": 16
         },
         {
+          "id": "CE279",
+          "count": 16
+        },
+        {
+          "id": "CF305",
+          "count": 16
+        },
+        {
           "id": "CE202",
           "count": 11
+        },
+        {
+          "id": "CE602",
+          "count": 10
         },
         {
           "id": "CB279",
@@ -10771,11 +15477,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE602",
-          "to": "CE602",
-          "count": 10
-        },
-        {
-          "from": "CE602",
           "to": "CR210",
           "count": 10
         },
@@ -10803,16 +15504,6 @@ export const FLOW_DATA = {
           "from": "CS124",
           "to": "CB290",
           "count": 8
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 8
-        },
-        {
-          "from": "CF305",
-          "to": "CF305",
-          "count": 7
         },
         {
           "from": "CS124",
@@ -11032,6 +15723,47 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "JK Saws",
+          "count": 19
+        },
+        {
+          "id": "Foilers",
+          "count": 19
+        },
+        {
+          "id": "Sanders",
+          "count": 4
+        },
+        {
+          "id": "Panel Saws",
+          "count": 2
+        },
+        {
+          "id": "Drills",
+          "count": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 19
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 2
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -11047,15 +15779,15 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
-          "id": "CE207",
-          "count": 4
-        },
-        {
           "id": "CE205",
-          "count": 3
+          "count": 2
         },
         {
           "id": "CS143",
+          "count": 2
+        },
+        {
+          "id": "CE207",
           "count": 2
         },
         {
@@ -11063,11 +15795,11 @@ export const FLOW_DATA = {
           "count": 2
         },
         {
-          "id": "CE204",
-          "count": 2
+          "id": "CE212",
+          "count": 1
         },
         {
-          "id": "CE212",
+          "id": "CE204",
           "count": 1
         }
       ],
@@ -11093,19 +15825,9 @@ export const FLOW_DATA = {
           "count": 2
         },
         {
-          "from": "CE207",
-          "to": "CE207",
-          "count": 2
-        },
-        {
           "from": "CE182",
           "to": "CB242",
           "count": 2
-        },
-        {
-          "from": "CE205",
-          "to": "CE205",
-          "count": 1
         },
         {
           "from": "CE205",
@@ -11124,11 +15846,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CS128",
-          "to": "CE204",
-          "count": 1
-        },
-        {
-          "from": "CE204",
           "to": "CE204",
           "count": 1
         }
@@ -11193,6 +15910,144 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 13
+        },
+        {
+          "id": "Drills",
+          "count": 13
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 9
+        },
+        {
+          "id": "Cut & Assemble",
+          "count": 6
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 5
+        },
+        {
+          "id": "Review",
+          "count": 5
+        },
+        {
+          "id": "Foilers",
+          "count": 3
+        },
+        {
+          "id": "Staging",
+          "count": 2
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 2
+        },
+        {
+          "id": "Edge Banders",
+          "count": 2
+        },
+        {
+          "id": "CNC Routers",
+          "count": 1
+        },
+        {
+          "id": "Miter Saws",
+          "count": 1
+        },
+        {
+          "id": "JK Saws",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Drills",
+          "count": 8
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 5
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 5
+        },
+        {
+          "from": "Drills",
+          "to": "Review",
+          "count": 4
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Multi-Edge Foilers",
+          "count": 3
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Review",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -11221,7 +16076,7 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE204",
-          "count": 4
+          "count": 2
         },
         {
           "id": "CE211",
@@ -11283,11 +16138,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CE592",
-          "to": "CE204",
-          "count": 2
-        },
-        {
-          "from": "CE204",
           "to": "CE204",
           "count": 2
         },
@@ -11408,6 +16258,48 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Rivet",
+          "count": 57
+        },
+        {
+          "id": "Beam Saws",
+          "count": 54
+        },
+        {
+          "id": "Foilers",
+          "count": 22
+        },
+        {
+          "id": "Staging",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Beam Saws",
+          "to": "Rivet",
+          "count": 32
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Foilers",
+          "count": 22
+        },
+        {
+          "from": "Foilers",
+          "to": "Rivet",
+          "count": 22
+        },
+        {
+          "from": "Rivet",
+          "to": "Staging",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -11483,6 +16375,53 @@ export const FLOW_DATA = {
           "from": "SAW",
           "to": "ROUTER",
           "count": 4
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 147
+        },
+        {
+          "id": "Print",
+          "count": 98
+        },
+        {
+          "id": "CNC Routers",
+          "count": 6
+        },
+        {
+          "id": "Shape Routers",
+          "count": 4
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Print",
+          "count": 98
+        },
+        {
+          "from": "Print",
+          "to": "CNC Routers",
+          "count": 5
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Print",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 1
         }
       ]
     },
@@ -11573,6 +16512,34 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Beam Saws",
+          "count": 201
+        },
+        {
+          "id": "Staging",
+          "count": 54
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 5
+        }
+      ],
+      "edges": [
+        {
+          "from": "Staging",
+          "to": "Beam Saws",
+          "count": 54
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Dowel Drills",
+          "count": 5
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -11641,6 +16608,47 @@ export const FLOW_DATA = {
         {
           "from": "EDGE / FOIL",
           "to": "STAGING",
+          "count": 2
+        }
+      ]
+    },
+    "group": {
+      "nodes": [
+        {
+          "id": "Rivet",
+          "count": 50
+        },
+        {
+          "id": "Beam Saws",
+          "count": 8
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 6
+        },
+        {
+          "id": "Foilers",
+          "count": 2
+        },
+        {
+          "id": "Staging",
+          "count": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "Beam Saws",
+          "to": "Dowel Drills",
+          "count": 6
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Staging",
           "count": 2
         }
       ]
@@ -11750,14 +16758,97 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Shape Routers",
+          "count": 7
+        },
+        {
+          "id": "Angular Saws",
+          "count": 6
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 3
+        },
+        {
+          "id": "Stain",
+          "count": 2
+        },
+        {
+          "id": "Staging",
+          "count": 2
+        },
+        {
+          "id": "Spray",
+          "count": 2
+        },
+        {
+          "id": "JK Saws",
+          "count": 1
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "id": "Foilers",
+          "count": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 6
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 3
+        },
+        {
+          "from": "Stain",
+          "to": "Staging",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Stain",
+          "count": 1
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Stain",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
           "id": "CR219",
-          "count": 6
-        },
-        {
-          "id": "CE488",
           "count": 6
         },
         {
@@ -11766,6 +16857,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CS124",
+          "count": 3
+        },
+        {
+          "id": "CE488",
           "count": 3
         },
         {
@@ -11805,11 +16900,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CR219",
-          "to": "CE488",
-          "count": 3
-        },
-        {
-          "from": "CE488",
           "to": "CE488",
           "count": 3
         },
@@ -12153,6 +17243,1377 @@ export const FLOW_DATA = {
         }
       ]
     },
+    "group": {
+      "nodes": [
+        {
+          "id": "Angular Saws",
+          "count": 3923
+        },
+        {
+          "id": "Foilers",
+          "count": 3662
+        },
+        {
+          "id": "JK Saws",
+          "count": 3345
+        },
+        {
+          "id": "Sanders",
+          "count": 1410
+        },
+        {
+          "id": "Drill & Size",
+          "count": 1397
+        },
+        {
+          "id": "Shape Routers",
+          "count": 1253
+        },
+        {
+          "id": "Multi-Edge Foilers",
+          "count": 1102
+        },
+        {
+          "id": "Miter Saws",
+          "count": 804
+        },
+        {
+          "id": "Drills",
+          "count": 780
+        },
+        {
+          "id": "CNC Routers",
+          "count": 609
+        },
+        {
+          "id": "Panel Saws",
+          "count": 492
+        },
+        {
+          "id": "Staging",
+          "count": 480
+        },
+        {
+          "id": "Dowel Drills",
+          "count": 460
+        },
+        {
+          "id": "Dovetail",
+          "count": 430
+        },
+        {
+          "id": "Multi-Edge Banders",
+          "count": 397
+        },
+        {
+          "id": "Chop Saws",
+          "count": 350
+        },
+        {
+          "id": "Spray",
+          "count": 320
+        },
+        {
+          "id": "Cut & Assemble",
+          "count": 273
+        },
+        {
+          "id": "Beam Saws",
+          "count": 263
+        },
+        {
+          "id": "Edge Banders",
+          "count": 213
+        },
+        {
+          "id": "Specialty Routers",
+          "count": 114
+        },
+        {
+          "id": "Rivet",
+          "count": 107
+        },
+        {
+          "id": "Print",
+          "count": 98
+        },
+        {
+          "id": "Specialty Foilers",
+          "count": 97
+        },
+        {
+          "id": "Review",
+          "count": 90
+        },
+        {
+          "id": "Cut-to-Size",
+          "count": 85
+        },
+        {
+          "id": "Sub-Assembly",
+          "count": 69
+        },
+        {
+          "id": "Notch Saws",
+          "count": 64
+        },
+        {
+          "id": "Shape & Foil",
+          "count": 36
+        },
+        {
+          "id": "Profile",
+          "count": 35
+        },
+        {
+          "id": "Stain",
+          "count": 32
+        },
+        {
+          "id": "Glue-Up",
+          "count": 11
+        },
+        {
+          "id": "Press",
+          "count": 8
+        },
+        {
+          "id": "Loading",
+          "count": 8
+        },
+        {
+          "id": "Mold",
+          "count": 4
+        }
+      ],
+      "edges": [
+        {
+          "from": "JK Saws",
+          "to": "Foilers",
+          "count": 2452
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 945
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Foilers",
+          "count": 850
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drill & Size",
+          "count": 753
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape Routers",
+          "count": 603
+        },
+        {
+          "from": "Foilers",
+          "to": "Sanders",
+          "count": 575
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Dovetail",
+          "count": 329
+        },
+        {
+          "from": "Sanders",
+          "to": "Drill & Size",
+          "count": 299
+        },
+        {
+          "from": "JK Saws",
+          "to": "Sanders",
+          "count": 277
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Sanders",
+          "count": 272
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape Routers",
+          "count": 270
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Multi-Edge Banders",
+          "count": 252
+        },
+        {
+          "from": "Foilers",
+          "to": "Drills",
+          "count": 246
+        },
+        {
+          "from": "Foilers",
+          "to": "Miter Saws",
+          "count": 231
+        },
+        {
+          "from": "Foilers",
+          "to": "CNC Routers",
+          "count": 213
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Miter Saws",
+          "count": 191
+        },
+        {
+          "from": "Sanders",
+          "to": "Drills",
+          "count": 187
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Shape Routers",
+          "count": 183
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "CNC Routers",
+          "count": 156
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drill & Size",
+          "count": 151
+        },
+        {
+          "from": "Sanders",
+          "to": "Foilers",
+          "count": 146
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Spray",
+          "count": 142
+        },
+        {
+          "from": "JK Saws",
+          "to": "Drills",
+          "count": 130
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Edge Banders",
+          "count": 123
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Sanders",
+          "count": 113
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Multi-Edge Banders",
+          "count": 104
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Spray",
+          "count": 98
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Print",
+          "count": 98
+        },
+        {
+          "from": "Foilers",
+          "to": "Staging",
+          "count": 97
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Sanders",
+          "count": 95
+        },
+        {
+          "from": "Angular Saws",
+          "to": "CNC Routers",
+          "count": 94
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Miter Saws",
+          "count": 93
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Staging",
+          "count": 89
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Miter Saws",
+          "count": 85
+        },
+        {
+          "from": "Foilers",
+          "to": "Dowel Drills",
+          "count": 85
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Cut-to-Size",
+          "count": 85
+        },
+        {
+          "from": "Foilers",
+          "to": "Drill & Size",
+          "count": 82
+        },
+        {
+          "from": "Foilers",
+          "to": "Dovetail",
+          "count": 70
+        },
+        {
+          "from": "Foilers",
+          "to": "Cut & Assemble",
+          "count": 62
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Foilers",
+          "count": 60
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Dowel Drills",
+          "count": 59
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Dowel Drills",
+          "count": 58
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 56
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Dowel Drills",
+          "count": 56
+        },
+        {
+          "from": "Staging",
+          "to": "Beam Saws",
+          "count": 54
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Foilers",
+          "count": 52
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Dowel Drills",
+          "count": 52
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Miter Saws",
+          "count": 50
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Miter Saws",
+          "count": 49
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Multi-Edge Foilers",
+          "count": 48
+        },
+        {
+          "from": "JK Saws",
+          "to": "Staging",
+          "count": 46
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Drill & Size",
+          "count": 44
+        },
+        {
+          "from": "JK Saws",
+          "to": "Edge Banders",
+          "count": 42
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Staging",
+          "count": 41
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Dowel Drills",
+          "count": 41
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Foilers",
+          "count": 41
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Multi-Edge Foilers",
+          "count": 39
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drills",
+          "count": 37
+        },
+        {
+          "from": "Drills",
+          "to": "Miter Saws",
+          "count": 37
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape Routers",
+          "count": 37
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Miter Saws",
+          "count": 37
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Drills",
+          "count": 36
+        },
+        {
+          "from": "JK Saws",
+          "to": "CNC Routers",
+          "count": 35
+        },
+        {
+          "from": "Drills",
+          "to": "Dowel Drills",
+          "count": 34
+        },
+        {
+          "from": "Dovetail",
+          "to": "Review",
+          "count": 33
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Spray",
+          "count": 33
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Rivet",
+          "count": 32
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Shape Routers",
+          "count": 31
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Staging",
+          "count": 31
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Dowel Drills",
+          "count": 31
+        },
+        {
+          "from": "Panel Saws",
+          "to": "CNC Routers",
+          "count": 30
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Drill & Size",
+          "count": 30
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Specialty Routers",
+          "count": 30
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Shape Routers",
+          "count": 29
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Specialty Routers",
+          "count": 27
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Notch Saws",
+          "count": 27
+        },
+        {
+          "from": "Drills",
+          "to": "Notch Saws",
+          "count": 26
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Foilers",
+          "count": 24
+        },
+        {
+          "from": "Foilers",
+          "to": "Specialty Routers",
+          "count": 23
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Sanders",
+          "count": 23
+        },
+        {
+          "from": "Sub-Assembly",
+          "to": "Dovetail",
+          "count": 23
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Foilers",
+          "count": 22
+        },
+        {
+          "from": "JK Saws",
+          "to": "Shape & Foil",
+          "count": 22
+        },
+        {
+          "from": "Foilers",
+          "to": "Rivet",
+          "count": 22
+        },
+        {
+          "from": "Stain",
+          "to": "Staging",
+          "count": 21
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drills",
+          "count": 21
+        },
+        {
+          "from": "Drills",
+          "to": "Spray",
+          "count": 21
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Drills",
+          "count": 21
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Specialty Routers",
+          "count": 21
+        },
+        {
+          "from": "Drills",
+          "to": "Sanders",
+          "count": 20
+        },
+        {
+          "from": "Sanders",
+          "to": "Shape Routers",
+          "count": 20
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Drill & Size",
+          "count": 20
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Drills",
+          "count": 19
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Drills",
+          "count": 19
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Foilers",
+          "count": 19
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "CNC Routers",
+          "count": 19
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Edge Banders",
+          "count": 18
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Stain",
+          "count": 18
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "JK Saws",
+          "count": 17
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Review",
+          "count": 17
+        },
+        {
+          "from": "Sub-Assembly",
+          "to": "Profile",
+          "count": 17
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape Routers",
+          "count": 16
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Shape Routers",
+          "count": 16
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Specialty Foilers",
+          "count": 15
+        },
+        {
+          "from": "Profile",
+          "to": "Multi-Edge Banders",
+          "count": 15
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Specialty Foilers",
+          "count": 15
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Staging",
+          "count": 15
+        },
+        {
+          "from": "Foilers",
+          "to": "Review",
+          "count": 14
+        },
+        {
+          "from": "Edge Banders",
+          "to": "CNC Routers",
+          "count": 13
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Foilers",
+          "count": 13
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Foilers",
+          "count": 13
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Shape Routers",
+          "count": 13
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Drills",
+          "count": 13
+        },
+        {
+          "from": "Spray",
+          "to": "Review",
+          "count": 13
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "JK Saws",
+          "count": 13
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Staging",
+          "count": 13
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Staging",
+          "count": 12
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Shape & Foil",
+          "count": 12
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "CNC Routers",
+          "count": 12
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Banders",
+          "count": 11
+        },
+        {
+          "from": "Sanders",
+          "to": "Chop Saws",
+          "count": 11
+        },
+        {
+          "from": "Sanders",
+          "to": "Staging",
+          "count": 11
+        },
+        {
+          "from": "Beam Saws",
+          "to": "Dowel Drills",
+          "count": 11
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Spray",
+          "count": 10
+        },
+        {
+          "from": "JK Saws",
+          "to": "Specialty Foilers",
+          "count": 10
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Specialty Routers",
+          "count": 10
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Sanders",
+          "count": 9
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drill & Size",
+          "count": 9
+        },
+        {
+          "from": "Spray",
+          "to": "Staging",
+          "count": 9
+        },
+        {
+          "from": "Foilers",
+          "to": "Notch Saws",
+          "count": 9
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Foilers",
+          "count": 9
+        },
+        {
+          "from": "Foilers",
+          "to": "Chop Saws",
+          "count": 9
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Multi-Edge Foilers",
+          "count": 9
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Shape Routers",
+          "count": 9
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Stain",
+          "count": 9
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Staging",
+          "count": 9
+        },
+        {
+          "from": "Stain",
+          "to": "JK Saws",
+          "count": 9
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Loading",
+          "count": 8
+        },
+        {
+          "from": "Profile",
+          "to": "Dowel Drills",
+          "count": 8
+        },
+        {
+          "from": "Sanders",
+          "to": "Dowel Drills",
+          "count": 8
+        },
+        {
+          "from": "Spray",
+          "to": "Miter Saws",
+          "count": 8
+        },
+        {
+          "from": "Sanders",
+          "to": "CNC Routers",
+          "count": 8
+        },
+        {
+          "from": "JK Saws",
+          "to": "Dowel Drills",
+          "count": 8
+        },
+        {
+          "from": "Dovetail",
+          "to": "Miter Saws",
+          "count": 8
+        },
+        {
+          "from": "Drills",
+          "to": "Staging",
+          "count": 7
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Drills",
+          "count": 7
+        },
+        {
+          "from": "Miter Saws",
+          "to": "JK Saws",
+          "count": 7
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Drill & Size",
+          "count": 7
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Sub-Assembly",
+          "count": 7
+        },
+        {
+          "from": "Sub-Assembly",
+          "to": "Drills",
+          "count": 7
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Sanders",
+          "count": 7
+        },
+        {
+          "from": "JK Saws",
+          "to": "Multi-Edge Banders",
+          "count": 7
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Edge Banders",
+          "count": 7
+        },
+        {
+          "from": "Sanders",
+          "to": "Edge Banders",
+          "count": 6
+        },
+        {
+          "from": "Sanders",
+          "to": "Spray",
+          "count": 6
+        },
+        {
+          "from": "Miter Saws",
+          "to": "CNC Routers",
+          "count": 6
+        },
+        {
+          "from": "Dovetail",
+          "to": "CNC Routers",
+          "count": 6
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Drills",
+          "count": 5
+        },
+        {
+          "from": "Drills",
+          "to": "Review",
+          "count": 5
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Foilers",
+          "count": 5
+        },
+        {
+          "from": "Print",
+          "to": "CNC Routers",
+          "count": 5
+        },
+        {
+          "from": "Cut & Assemble",
+          "to": "Shape Routers",
+          "count": 5
+        },
+        {
+          "from": "JK Saws",
+          "to": "Miter Saws",
+          "count": 5
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Dovetail",
+          "count": 5
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Stain",
+          "count": 4
+        },
+        {
+          "from": "Staging",
+          "to": "Review",
+          "count": 4
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Mold",
+          "count": 4
+        },
+        {
+          "from": "Sanders",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "Foilers",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Staging",
+          "count": 4
+        },
+        {
+          "from": "Sanders",
+          "to": "Profile",
+          "count": 4
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Multi-Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Dowel Drills",
+          "count": 4
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Miter Saws",
+          "count": 4
+        },
+        {
+          "from": "JK Saws",
+          "to": "Profile",
+          "count": 4
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Press",
+          "count": 4
+        },
+        {
+          "from": "Cut-to-Size",
+          "to": "Shape Routers",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Edge Banders",
+          "count": 4
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Specialty Foilers",
+          "count": 4
+        },
+        {
+          "from": "Drills",
+          "to": "Chop Saws",
+          "count": 3
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Sanders",
+          "count": 3
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Foilers",
+          "count": 3
+        },
+        {
+          "from": "Dovetail",
+          "to": "Drills",
+          "count": 3
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Multi-Edge Banders",
+          "count": 3
+        },
+        {
+          "from": "Profile",
+          "to": "Shape Routers",
+          "count": 3
+        },
+        {
+          "from": "Stain",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Profile",
+          "to": "Staging",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Edge Banders",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Chop Saws",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Edge Banders",
+          "to": "Miter Saws",
+          "count": 2
+        },
+        {
+          "from": "Specialty Foilers",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Shape Routers",
+          "to": "CNC Routers",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Sanders",
+          "count": 2
+        },
+        {
+          "from": "Foilers",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "JK Saws",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "Panel Saws",
+          "to": "Profile",
+          "count": 2
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Drills",
+          "count": 2
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Specialty Routers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Spray",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Shape Routers",
+          "count": 2
+        },
+        {
+          "from": "Press",
+          "to": "Foilers",
+          "count": 2
+        },
+        {
+          "from": "Press",
+          "to": "Multi-Edge Foilers",
+          "count": 2
+        },
+        {
+          "from": "Specialty Routers",
+          "to": "Review",
+          "count": 2
+        },
+        {
+          "from": "Drills",
+          "to": "Stain",
+          "count": 1
+        },
+        {
+          "from": "Spray",
+          "to": "Sanders",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Profile",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Dowel Drills",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Specialty Foilers",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Press",
+          "count": 1
+        },
+        {
+          "from": "Profile",
+          "to": "Drill & Size",
+          "count": 1
+        },
+        {
+          "from": "Spray",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Drills",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Drills",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Foilers",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Chop Saws",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Notch Saws",
+          "count": 1
+        },
+        {
+          "from": "Notch Saws",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Print",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Rivet",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Chop Saws",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Multi-Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Multi-Edge Banders",
+          "to": "Dovetail",
+          "count": 1
+        },
+        {
+          "from": "Drill & Size",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "Sanders",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Edge Banders",
+          "count": 1
+        },
+        {
+          "from": "CNC Routers",
+          "to": "Multi-Edge Foilers",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Spray",
+          "count": 1
+        },
+        {
+          "from": "Dovetail",
+          "to": "Staging",
+          "count": 1
+        },
+        {
+          "from": "Shape Routers",
+          "to": "Foilers",
+          "count": 1
+        },
+        {
+          "from": "Dowel Drills",
+          "to": "Specialty Routers",
+          "count": 1
+        },
+        {
+          "from": "Shape & Foil",
+          "to": "Shape Routers",
+          "count": 1
+        },
+        {
+          "from": "Foilers",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Miter Saws",
+          "to": "Shape & Foil",
+          "count": 1
+        },
+        {
+          "from": "Angular Saws",
+          "to": "JK Saws",
+          "count": 1
+        }
+      ]
+    },
     "station": {
       "nodes": [
         {
@@ -12165,15 +18626,15 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE202",
-          "count": 1436
+          "count": 1383
         },
         {
           "id": "CE207",
-          "count": 1183
+          "count": 1167
         },
         {
           "id": "CS204",
-          "count": 1061
+          "count": 1031
         },
         {
           "id": "CS123",
@@ -12208,10 +18669,6 @@ export const FLOW_DATA = {
           "count": 466
         },
         {
-          "id": "CE212",
-          "count": 442
-        },
-        {
           "id": "CE180",
           "count": 440
         },
@@ -12220,20 +18677,16 @@ export const FLOW_DATA = {
           "count": 430
         },
         {
+          "id": "CE212",
+          "count": 420
+        },
+        {
           "id": "CE210",
           "count": 394
         },
         {
           "id": "CS877",
-          "count": 393
-        },
-        {
-          "id": "CE279",
-          "count": 386
-        },
-        {
-          "id": "CS601",
-          "count": 375
+          "count": 392
         },
         {
           "id": "CB283",
@@ -12248,28 +18701,28 @@ export const FLOW_DATA = {
           "count": 346
         },
         {
+          "id": "CS601",
+          "count": 345
+        },
+        {
           "id": "CE182",
           "count": 337
         },
         {
           "id": "CF305",
-          "count": 330
+          "count": 320
         },
         {
           "id": "CE635",
           "count": 306
         },
         {
+          "id": "CE279",
+          "count": 273
+        },
+        {
           "id": "DFRIS",
           "count": 269
-        },
-        {
-          "id": "CB242",
-          "count": 260
-        },
-        {
-          "id": "CE204",
-          "count": 260
         },
         {
           "id": "CS142",
@@ -12280,8 +18733,12 @@ export const FLOW_DATA = {
           "count": 252
         },
         {
-          "id": "CE208",
-          "count": 249
+          "id": "CB242",
+          "count": 226
+        },
+        {
+          "id": "CE204",
+          "count": 204
         },
         {
           "id": "CS135",
@@ -12292,14 +18749,6 @@ export const FLOW_DATA = {
           "count": 195
         },
         {
-          "id": "CE205",
-          "count": 189
-        },
-        {
-          "id": "CE602",
-          "count": 184
-        },
-        {
           "id": "CS613",
           "count": 175
         },
@@ -12308,24 +18757,36 @@ export const FLOW_DATA = {
           "count": 174
         },
         {
-          "id": "CS143",
-          "count": 153
+          "id": "CE205",
+          "count": 164
         },
         {
-          "id": "CS414",
-          "count": 136
+          "id": "CE602",
+          "count": 158
+        },
+        {
+          "id": "CS143",
+          "count": 153
         },
         {
           "id": "CE211",
           "count": 134
         },
         {
+          "id": "CS414",
+          "count": 128
+        },
+        {
           "id": "CR179",
           "count": 121
         },
         {
+          "id": "CE208",
+          "count": 116
+        },
+        {
           "id": "CB517",
-          "count": 115
+          "count": 114
         },
         {
           "id": "CR210",
@@ -12352,12 +18813,12 @@ export const FLOW_DATA = {
           "count": 85
         },
         {
-          "id": "CE592",
+          "id": "CS132",
           "count": 82
         },
         {
-          "id": "CS132",
-          "count": 82
+          "id": "CE592",
+          "count": 66
         },
         {
           "id": "CS796",
@@ -12385,14 +18846,10 @@ export const FLOW_DATA = {
         },
         {
           "id": "CE614",
-          "count": 50
-        },
-        {
-          "id": "CE303",
           "count": 37
         },
         {
-          "id": "CE488",
+          "id": "CE303",
           "count": 36
         },
         {
@@ -12404,10 +18861,6 @@ export const FLOW_DATA = {
           "count": 35
         },
         {
-          "id": "CF425",
-          "count": 33
-        },
-        {
           "id": "HSRIS",
           "count": 33
         },
@@ -12416,7 +18869,15 @@ export const FLOW_DATA = {
           "count": 33
         },
         {
+          "id": "CF425",
+          "count": 32
+        },
+        {
           "id": "CR220",
+          "count": 31
+        },
+        {
+          "id": "CE488",
           "count": 31
         },
         {
@@ -12496,11 +18957,11 @@ export const FLOW_DATA = {
           "count": 4
         },
         {
-          "id": "CP102",
-          "count": 4
+          "id": "SWRIS",
+          "count": 3
         },
         {
-          "id": "SWRIS",
+          "id": "CP102",
           "count": 3
         },
         {
@@ -12620,11 +19081,6 @@ export const FLOW_DATA = {
           "count": 144
         },
         {
-          "from": "CE208",
-          "to": "CE208",
-          "count": 133
-        },
-        {
           "from": "CR218",
           "to": "CS603",
           "count": 128
@@ -12648,11 +19104,6 @@ export const FLOW_DATA = {
           "from": "CS124",
           "to": "CR218",
           "count": 117
-        },
-        {
-          "from": "CE279",
-          "to": "CE279",
-          "count": 113
         },
         {
           "from": "CE202",
@@ -12845,11 +19296,6 @@ export const FLOW_DATA = {
           "count": 57
         },
         {
-          "from": "CE204",
-          "to": "CE204",
-          "count": 56
-        },
-        {
           "from": "CE202",
           "to": "CR218",
           "count": 56
@@ -12868,11 +19314,6 @@ export const FLOW_DATA = {
           "from": "DCRIS",
           "to": "CS135",
           "count": 54
-        },
-        {
-          "from": "CE202",
-          "to": "CE202",
-          "count": 53
         },
         {
           "from": "CE207",
@@ -13030,11 +19471,6 @@ export const FLOW_DATA = {
           "count": 34
         },
         {
-          "from": "CB242",
-          "to": "CB242",
-          "count": 34
-        },
-        {
           "from": "CE182",
           "to": "CS615",
           "count": 34
@@ -13090,11 +19526,6 @@ export const FLOW_DATA = {
           "count": 31
         },
         {
-          "from": "CS204",
-          "to": "CS204",
-          "count": 30
-        },
-        {
           "from": "CE206",
           "to": "CB506",
           "count": 30
@@ -13102,11 +19533,6 @@ export const FLOW_DATA = {
         {
           "from": "CE279",
           "to": "CR218",
-          "count": 30
-        },
-        {
-          "from": "CS601",
-          "to": "CS601",
           "count": 30
         },
         {
@@ -13185,11 +19611,6 @@ export const FLOW_DATA = {
           "count": 27
         },
         {
-          "from": "CE602",
-          "to": "CE602",
-          "count": 26
-        },
-        {
           "from": "CB202",
           "to": "CS796",
           "count": 26
@@ -13202,11 +19623,6 @@ export const FLOW_DATA = {
         {
           "from": "CE203",
           "to": "CR219",
-          "count": 25
-        },
-        {
-          "from": "CE205",
-          "to": "CE205",
           "count": 25
         },
         {
@@ -13252,11 +19668,6 @@ export const FLOW_DATA = {
         {
           "from": "CS128",
           "to": "DFRIS",
-          "count": 22
-        },
-        {
-          "from": "CE212",
-          "to": "CE212",
           "count": 22
         },
         {
@@ -13435,11 +19846,6 @@ export const FLOW_DATA = {
           "count": 17
         },
         {
-          "from": "CE592",
-          "to": "CE592",
-          "count": 16
-        },
-        {
           "from": "CE204",
           "to": "CD221",
           "count": 16
@@ -13462,11 +19868,6 @@ export const FLOW_DATA = {
         {
           "from": "CE212",
           "to": "CB517",
-          "count": 16
-        },
-        {
-          "from": "CE207",
-          "to": "CE207",
           "count": 16
         },
         {
@@ -13577,11 +19978,6 @@ export const FLOW_DATA = {
         {
           "from": "CE180",
           "to": "CB517",
-          "count": 13
-        },
-        {
-          "from": "CE614",
-          "to": "CE614",
           "count": 13
         },
         {
@@ -13775,11 +20171,6 @@ export const FLOW_DATA = {
           "count": 11
         },
         {
-          "from": "CF305",
-          "to": "CF305",
-          "count": 10
-        },
-        {
           "from": "CS123",
           "to": "CR177",
           "count": 10
@@ -13932,11 +20323,6 @@ export const FLOW_DATA = {
         {
           "from": "CS124",
           "to": "CR220",
-          "count": 8
-        },
-        {
-          "from": "CS414",
-          "to": "CS414",
           "count": 8
         },
         {
@@ -14367,11 +20753,6 @@ export const FLOW_DATA = {
         {
           "from": "CE303",
           "to": "CE205",
-          "count": 5
-        },
-        {
-          "from": "CE488",
-          "to": "CE488",
           "count": 5
         },
         {
@@ -15206,11 +21587,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CF425",
-          "to": "CF425",
-          "count": 1
-        },
-        {
-          "from": "CF425",
           "to": "CE279",
           "count": 1
         },
@@ -15372,11 +21748,6 @@ export const FLOW_DATA = {
         {
           "from": "CB506",
           "to": "CB242",
-          "count": 1
-        },
-        {
-          "from": "CS877",
-          "to": "CS877",
           "count": 1
         },
         {
@@ -15646,11 +22017,6 @@ export const FLOW_DATA = {
         },
         {
           "from": "CB517",
-          "to": "CB517",
-          "count": 1
-        },
-        {
-          "from": "CB517",
           "to": "CE614",
           "count": 1
         },
@@ -15765,11 +22131,6 @@ export const FLOW_DATA = {
           "count": 1
         },
         {
-          "from": "CE303",
-          "to": "CE303",
-          "count": 1
-        },
-        {
           "from": "CE207",
           "to": "CB242",
           "count": 1
@@ -15802,11 +22163,6 @@ export const FLOW_DATA = {
         {
           "from": "CS124",
           "to": "CS128",
-          "count": 1
-        },
-        {
-          "from": "CP102",
-          "to": "CP102",
           "count": 1
         }
       ]

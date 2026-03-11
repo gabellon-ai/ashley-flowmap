@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { FLOW_DATA, STATIONS, DEPARTMENTS } from "./flowData";
+import { FLOW_DATA, STATIONS, MACHINE_GROUPS, DEPARTMENTS } from "./flowData";
 
 // ─── Layout constants ────────────────────────────────────────
 const NODE_H = 44;
@@ -32,6 +32,11 @@ function getNodeColor(id, level) {
   if (level === "department") {
     return DEPT_COLORS[id] || DEFAULT_COLOR;
   }
+  if (level === "group") {
+    const mg = MACHINE_GROUPS[id];
+    if (mg) return DEPT_COLORS[mg.department] || DEFAULT_COLOR;
+    return DEFAULT_COLOR;
+  }
   // Station level — color by department
   const st = STATIONS[id];
   if (st) return DEPT_COLORS[st.department] || DEFAULT_COLOR;
@@ -42,14 +47,20 @@ function getNodeColor(id, level) {
 
 function getNodeLabel(id, level) {
   if (level === "department") return id;
+  if (level === "group") return id;
   const st = STATIONS[id];
   return st ? st.description : id;
 }
 
 function getNodeSublabel(id, level) {
   if (level === "department") return DEPARTMENTS[id] || "";
+  if (level === "group") {
+    const mg = MACHINE_GROUPS[id];
+    if (mg) return mg.department + " — " + mg.stations.length + " station" + (mg.stations.length !== 1 ? "s" : "");
+    return "";
+  }
   const st = STATIONS[id];
-  return st ? st.id : "";
+  return st ? st.id + " — " + st.group : "";
 }
 
 // ─── Edge color ──────────────────────────────────────────────
@@ -65,7 +76,7 @@ function computeLayout(flowLevel, level) {
   const { nodes, edges } = flowLevel;
   if (!nodes || nodes.length === 0) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300 };
 
-  const nodeW = level === "department" ? 130 : 110;
+  const nodeW = level === "department" ? 130 : level === "group" ? 120 : 110;
 
   // Source/target scoring
   const fromCount = {};
@@ -148,10 +159,11 @@ function computeLayout(flowLevel, level) {
 // ─── Main component ────────────────────────────────────────
 export default function DataFlowMap() {
   const [selectedClass, setSelectedClass] = useState("ALL PRODUCTS");
-  const [level, setLevel] = useState("department"); // "department" | "station"
+  const [level, setLevel] = useState("department"); // "department" | "group" | "station"
   const [hovNode, setHovNode] = useState(null);
   const [hovEdge, setHovEdge] = useState(null);
-  const [deptFilter, setDeptFilter] = useState(null); // filter station view to dept
+  const [deptFilter, setDeptFilter] = useState(null); // filter by dept
+  const [groupFilter, setGroupFilter] = useState(null); // filter by machine group
 
   const classNames = useMemo(() =>
     Object.keys(FLOW_DATA).sort((a, b) => {
@@ -163,21 +175,42 @@ export default function DataFlowMap() {
   const classData = FLOW_DATA[selectedClass];
   const flowLevel = classData ? classData[level] : null;
 
-  // If filtering stations by department, filter the data
+  // Filter data based on dept/group filters
   const filteredFlow = useMemo(() => {
     if (!flowLevel) return null;
-    if (level !== "station" || !deptFilter) return flowLevel;
 
-    const deptStations = new Set(
-      Object.values(STATIONS)
-        .filter(s => s.department === deptFilter)
-        .map(s => s.id)
-    );
-    return {
-      nodes: flowLevel.nodes.filter(n => deptStations.has(n.id)),
-      edges: flowLevel.edges.filter(e => deptStations.has(e.from) || deptStations.has(e.to)),
-    };
-  }, [flowLevel, level, deptFilter]);
+    if (level === "group" && deptFilter) {
+      const deptGroups = new Set(
+        Object.values(MACHINE_GROUPS)
+          .filter(g => g.department === deptFilter)
+          .map(g => g.id)
+      );
+      return {
+        nodes: flowLevel.nodes.filter(n => deptGroups.has(n.id)),
+        edges: flowLevel.edges.filter(e => deptGroups.has(e.from) || deptGroups.has(e.to)),
+      };
+    }
+
+    if (level === "station") {
+      let allowedStations = null;
+      if (groupFilter) {
+        const mg = MACHINE_GROUPS[groupFilter];
+        allowedStations = mg ? new Set(mg.stations) : null;
+      } else if (deptFilter) {
+        allowedStations = new Set(
+          Object.values(STATIONS).filter(s => s.department === deptFilter).map(s => s.id)
+        );
+      }
+      if (allowedStations) {
+        return {
+          nodes: flowLevel.nodes.filter(n => allowedStations.has(n.id)),
+          edges: flowLevel.edges.filter(e => allowedStations.has(e.from) || allowedStations.has(e.to)),
+        };
+      }
+    }
+
+    return flowLevel;
+  }, [flowLevel, level, deptFilter, groupFilter]);
 
   const layout = useMemo(() => {
     if (!filteredFlow) return { laidOutNodes: [], laidOutEdges: [], vbW: 400, vbH: 300, nodeW: 110, maxEdge: 1 };
@@ -222,13 +255,17 @@ export default function DataFlowMap() {
     return 0.06;
   };
 
-  const handleDeptClick = (deptId) => {
+  const handleNodeClick = (nodeId) => {
     if (level === "department") {
-      // Drill down to station level, filtered by this department
+      setLevel("group");
+      setDeptFilter(nodeId);
+      setGroupFilter(null);
+      setHovNode(null); setHovEdge(null);
+    } else if (level === "group") {
       setLevel("station");
-      setDeptFilter(deptId);
-      setHovNode(null);
-      setHovEdge(null);
+      setGroupFilter(nodeId);
+      // Keep deptFilter if set
+      setHovNode(null); setHovEdge(null);
     }
   };
 
@@ -236,11 +273,14 @@ export default function DataFlowMap() {
     if (target === "department") {
       setLevel("department");
       setDeptFilter(null);
+      setGroupFilter(null);
+    } else if (target === "group") {
+      setLevel("group");
+      setGroupFilter(null);
     } else if (target === "station") {
-      setDeptFilter(null);
+      setGroupFilter(null);
     }
-    setHovNode(null);
-    setHovEdge(null);
+    setHovNode(null); setHovEdge(null);
   };
 
   const font = "'DM Mono', 'Courier New', monospace";
@@ -262,7 +302,9 @@ export default function DataFlowMap() {
           </span>
           <span style={{ color: "#94a3b8", fontSize: 11 }}>|</span>
           <span style={{ color: "#64748b", fontSize: 10, textTransform: "uppercase", letterSpacing: 1 }}>
-            {level === "department" ? "Department View" : deptFilter ? `Station View — ${deptFilter}` : "All Stations View"}
+            {level === "department" ? "Department View"
+              : level === "group" ? (deptFilter ? `Machine Groups — ${deptFilter}` : "All Machine Groups")
+              : groupFilter ? `Stations — ${groupFilter}` : deptFilter ? `Stations — ${deptFilter}` : "All Stations"}
           </span>
         </div>
 
@@ -291,8 +333,13 @@ export default function DataFlowMap() {
           {/* Level toggle */}
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1, marginRight: 4 }}>VIEW:</label>
-            {["department", "station"].map(l => (
-              <button key={l} onClick={() => { setLevel(l); if (l === "department") setDeptFilter(null); setHovNode(null); setHovEdge(null); }}
+            {[["department", "DEPARTMENT"], ["group", "MACHINE GROUP"], ["station", "STATION"]].map(([l, lbl]) => (
+              <button key={l} onClick={() => {
+                setLevel(l);
+                if (l === "department") { setDeptFilter(null); setGroupFilter(null); }
+                if (l === "group") { setGroupFilter(null); }
+                setHovNode(null); setHovEdge(null);
+              }}
                 style={{
                   padding: "3px 10px", fontSize: 10, fontFamily: font, cursor: "pointer",
                   borderRadius: 3, border: level === l ? "1px solid #0284c7" : "1px solid #cbd5e1",
@@ -300,18 +347,18 @@ export default function DataFlowMap() {
                   color: level === l ? "#fff" : "#475569",
                   fontWeight: level === l ? 700 : 400,
                 }}>
-                {l === "department" ? "DEPARTMENT" : "STATION"}
+                {lbl}
               </button>
             ))}
           </div>
 
-          {/* Department filter (when in station view) */}
-          {level === "station" && (
+          {/* Department filter (group & station views) */}
+          {(level === "group" || level === "station") && (
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>DEPT FILTER:</label>
+              <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>DEPT:</label>
               <select
                 value={deptFilter || ""}
-                onChange={e => { setDeptFilter(e.target.value || null); setHovNode(null); setHovEdge(null); }}
+                onChange={e => { setDeptFilter(e.target.value || null); setGroupFilter(null); setHovNode(null); setHovEdge(null); }}
                 style={{
                   background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
                   padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
@@ -325,28 +372,58 @@ export default function DataFlowMap() {
               </select>
             </div>
           )}
+
+          {/* Machine group filter (station view) */}
+          {level === "station" && (
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <label style={{ color: "#475569", fontSize: 10, letterSpacing: 1 }}>GROUP:</label>
+              <select
+                value={groupFilter || ""}
+                onChange={e => { setGroupFilter(e.target.value || null); setHovNode(null); setHovEdge(null); }}
+                style={{
+                  background: "#fff", border: "1px solid #cbd5e1", borderRadius: 4,
+                  padding: "4px 8px", fontSize: 11, fontFamily: font, color: "#1e293b",
+                  cursor: "pointer",
+                }}
+              >
+                <option value="">All Groups</option>
+                {Object.keys(MACHINE_GROUPS).sort().map(g => (
+                  <option key={g} value={g}>{g} ({MACHINE_GROUPS[g].stations.length})</option>
+                ))}
+              </select>
+            </div>
+          )}
         </div>
 
         {/* Breadcrumb */}
         <div style={{ marginTop: 6, display: "flex", gap: 4, alignItems: "center", fontSize: 10 }}>
           <span onClick={() => handleBreadcrumb("department")}
-            style={{ color: "#0284c7", cursor: "pointer", textDecoration: "underline" }}>
+            style={{ color: level === "department" ? "#1e293b" : "#0284c7", cursor: level === "department" ? "default" : "pointer",
+              textDecoration: level === "department" ? "none" : "underline", fontWeight: level === "department" ? 700 : 400 }}>
             Departments
           </span>
-          {level === "station" && (
+          {(level === "group" || level === "station") && (
             <>
               <span style={{ color: "#94a3b8" }}>&gt;</span>
-              <span onClick={() => handleBreadcrumb("station")}
-                style={{ color: deptFilter ? "#0284c7" : "#1e293b", cursor: deptFilter ? "pointer" : "default",
-                  textDecoration: deptFilter ? "underline" : "none", fontWeight: deptFilter ? 400 : 700 }}>
-                Stations
+              <span onClick={() => handleBreadcrumb("group")}
+                style={{ color: level === "group" ? "#1e293b" : "#0284c7", cursor: level === "group" ? "default" : "pointer",
+                  textDecoration: level === "group" ? "none" : "underline", fontWeight: level === "group" ? 700 : 400 }}>
+                Machine Groups
               </span>
-              {deptFilter && (
+              {deptFilter && level === "group" && (
                 <>
                   <span style={{ color: "#94a3b8" }}>&gt;</span>
                   <span style={{ color: "#1e293b", fontWeight: 700 }}>{deptFilter}</span>
                 </>
               )}
+            </>
+          )}
+          {level === "station" && (
+            <>
+              <span style={{ color: "#94a3b8" }}>&gt;</span>
+              <span style={{ color: "#1e293b", fontWeight: 700 }}>
+                Stations{groupFilter ? ` — ${groupFilter}` : deptFilter ? ` — ${deptFilter}` : ""}
+              </span>
             </>
           )}
         </div>
@@ -416,14 +493,14 @@ export default function DataFlowMap() {
             const clr = getNodeColor(n.id, level);
             const label = getNodeLabel(n.id, level);
             const sublabel = getNodeSublabel(n.id, level);
-            const canDrill = level === "department";
+            const canDrill = level === "department" || level === "group";
 
             return (
               <g key={n.id} transform={`translate(${n.x},${n.y})`}
                 style={{ cursor: canDrill ? "pointer" : "default" }}
                 onMouseEnter={() => setHovNode(n.id)}
                 onMouseLeave={() => setHovNode(null)}
-                onClick={() => canDrill && handleDeptClick(n.id)}>
+                onClick={() => canDrill && handleNodeClick(n.id)}>
 
                 {(isH || isC) && (
                   <rect width={n.w} height={NODE_H} rx={NODE_R}
@@ -517,7 +594,12 @@ export default function DataFlowMap() {
                 </text>
                 {level === "department" && (
                   <text x={pX + 10} y={pY + 58} fontSize={8} fill="#0284c7" fontWeight={700} fontFamily={font}>
-                    Click to see stations in this department
+                    Click to see machine groups in this department
+                  </text>
+                )}
+                {level === "group" && (
+                  <text x={pX + 10} y={pY + 58} fontSize={8} fill="#0284c7" fontWeight={700} fontFamily={font}>
+                    Click to see individual stations in this group
                   </text>
                 )}
               </g>
@@ -537,7 +619,7 @@ export default function DataFlowMap() {
         </span>
         <span style={{ color: "#94a3b8", fontSize: 10 }}>·</span>
         <span style={{ color: "#64748b", fontSize: 10, fontFamily: font }}>
-          {laidOutNodes.length} {level === "department" ? "departments" : "stations"} shown
+          {laidOutNodes.length} {level === "department" ? "departments" : level === "group" ? "machine groups" : "stations"} shown
         </span>
         <span style={{ color: "#94a3b8", fontSize: 10 }}>·</span>
         <span style={{ color: "#64748b", fontSize: 10, fontFamily: font }}>
@@ -584,8 +666,10 @@ export default function DataFlowMap() {
       {/* ── Hint ── */}
       <div style={{ marginTop: 6, color: "#94a3b8", fontSize: 9, letterSpacing: 1, fontFamily: font }}>
         {level === "department"
-          ? "CLICK A DEPARTMENT NODE TO DRILL DOWN INTO INDIVIDUAL STATIONS. USE THE DROPDOWN TO FILTER BY PRODUCT CLASS."
-          : "USE THE DEPT FILTER TO FOCUS ON A SPECIFIC DEPARTMENT. CLICK 'DEPARTMENT' BREADCRUMB TO GO BACK."}
+          ? "CLICK A DEPARTMENT TO SEE ITS MACHINE GROUPS. USE THE DROPDOWN TO FILTER BY PRODUCT CLASS."
+          : level === "group"
+          ? "CLICK A MACHINE GROUP TO SEE ITS STATIONS. USE BREADCRUMBS TO GO BACK."
+          : "USE DEPT OR GROUP FILTERS TO NARROW DOWN. USE BREADCRUMBS TO GO BACK."}
       </div>
     </div>
   );
